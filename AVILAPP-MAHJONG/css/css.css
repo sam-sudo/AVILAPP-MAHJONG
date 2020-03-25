@@ -16,20 +16,24 @@ body{
 }
 .nombre{
     margin: 0 auto;
-    font-size: 80px;
+    font-size: 3em;
     margin-top: 20px;
     display: block;
     width: 100%;
+    color: black;
+    -webkit-text-stroke: 2px white;
+
 }
 .menu{
     margin:  auto;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 60%;
     text-align: center;
     justify-content :center;
-    align-items:center;
-    padding-left: 200px;
+    align-items:flex-end;
+   
+    
 }
 .btn{
     width: 40%;
@@ -45,17 +49,51 @@ body{
     text-align: center;
     justify-content :center;
     align-items:center;
-    
+    font-size: 2em;
 }
 .btn:hover{
     cursor: pointer;
-    font-size: 30px;
+    font-size: 3em;
+    font-weight: bold;
+    width: 60%;
 }
+
 .ficha{
+    margin-top: -15em;
     display: flex;
-    width: 20%;
+    width: 40%;
+    justify-content :center;
+    
 }
 img{
-    width: 100%;
-    height: 300px;
+    height: 200px;
+    
 }
+/*------------------------------------------------MOVIMIENTO IMG------------------------------------------------*/
+@keyframes rotate {from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}}
+@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}}
+img{
+    -webkit-animation: 5s rotate linear infinite;
+    animation: 10s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    
+}
+img:hover{
+    -webkit-animation: 1s rotate linear infinite;
+    
+
+    animation: 1s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+img {
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+/*------------------------------------------------FIN MOVIMIENTO IMG------------------------------------------------*/
