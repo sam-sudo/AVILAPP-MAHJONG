@@ -8,22 +8,21 @@
     <script src="js/main.js"></script>
     <title>AVILAPP Mahjong</title>
 
+    <script>
+      
+    </script>
     
-
 </head>
-<body>
+<body onload="auudios()">
     <div class="nombre">
-        AVILAPP-MAHJONG
+        <h1>AVILAPP-MAHJONG</h1>
     </div>
     <div class="container">
-        
-        
         <div class="menu">
-            <audio src="music/sonido1.mp3"></audio>
-            <button type="button" id="btn" class="btn btn-inicio">INICIO</button>
-            <button type="button" class="btn btn-niveles">NIVELES</button>
-            <button type="button" class="btn btn-puntuación">PUNTUACIÓN</button>
-            <button type="button" class="btn btn-creditos">CREDITOS</button>
+            <button type="button" id="inicio" class="btn btn-inicio sonido" onmouseover="auudios()">INICIO</button>
+            <button type="button"  class="btn btn-niveles sonido" onmouseover="auudios()">NIVELES</button>
+            <button type="button"  class="btn btn-puntuación sonido" onmouseover="auudios()">PUNTUACIÓN</button>
+            <button type="button"  class="btn btn-creditos sonido" onmouseover="auudios()" >CREDITOS</button>
         </div>
         <div class="ficha">
             <img src="img/mahjonImagen.png" alt="ficha">
