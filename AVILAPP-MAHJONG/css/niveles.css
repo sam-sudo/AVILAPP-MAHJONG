@@ -64,27 +64,29 @@ body{
     display: flex;
     width: 40%;
     justify-content :center;
-    
 }
-img{
+.ficha img{
     height: 200px;
 }
 a{
     text-decoration: none;
     color: black;
 }
+
+
+
 /*------------------------------------------------MOVIMIENTO IMG------------------------------------------------*/
 @keyframes rotate {from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}}
 @-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
   to {-webkit-transform: rotate(360deg);}}
-img{
+.ficha img{
     -webkit-animation: 5s rotate linear infinite;
     animation: 10s rotate linear infinite;
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
 }
-img:hover{
+.ficha img:hover{
     -webkit-animation: 1s rotate linear infinite;
     animation: 1s rotate linear infinite;
     -webkit-transform-origin: 50% 50%;
@@ -93,7 +95,7 @@ img:hover{
     animation-direction: reverse;
 }
 
-img {
+.ficha img {
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
 }
