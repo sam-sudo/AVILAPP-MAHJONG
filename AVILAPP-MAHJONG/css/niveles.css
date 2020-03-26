@@ -53,9 +53,9 @@ body{
 }
 .btn:hover{
     cursor: pointer;
-    font-size: 3em;
     font-weight: bold;
     width: 60%;
+    font-size: 3em;
 }
 
 .ficha{
@@ -71,9 +71,6 @@ a{
     text-decoration: none;
     color: black;
 }
-.btn:hover{
-    font-size: 1em;
-}
 /*------------------------------------------------ BOTON VOLVER------------------------------------------------*/
 .volver{
     display: flex;
@@ -83,12 +80,12 @@ a{
     width: 100%;
     padding-right: 50px;
     padding-bottom: 50px;
-   
+    opacity: 0.2;
+    transition: opacity 1s;
 }
-
-
-
-
+.volver:hover{
+    opacity: 1;
+}
 
 .btn-volver{
     display: flex;
@@ -153,7 +150,7 @@ a{
         display: none;
     }
     .nombre{
-        font-size: 1em;
+        font-size: 2em;
     }
     .btn{
         font-size: 1em;
@@ -163,5 +160,8 @@ a{
         text-align: center;
         justify-content :center;
         align-items: center;
+    }
+    .btn-volver{
+        font-size: 1em;
     }
   }
