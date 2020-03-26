@@ -33,7 +33,6 @@ body{
     justify-content :center;
     align-items:flex-end;
    
-    
 }
 .btn{
     width: 40%;
@@ -72,6 +71,9 @@ a{
     text-decoration: none;
     color: black;
 }
+.btn:hover{
+    font-size: 1em;
+}
 
 
 
@@ -106,15 +108,15 @@ a{
         display: none;
     }
     .nombre{
-        margin: 0 auto;
         font-size: 1em;
-        margin-top: 20px;
-        display: block;
-        width: 100%;
-        color: black;
-        -webkit-text-stroke: 2px white;
     }
     .btn{
         font-size: 1em;
+    }
+    .menu{
+        width: 100%;
+        text-align: center;
+        justify-content :center;
+        align-items: center;
     }
   }
