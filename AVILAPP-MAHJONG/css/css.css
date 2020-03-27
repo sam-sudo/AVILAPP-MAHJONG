@@ -35,8 +35,9 @@ body{
    
     
 }
+
 .btn{
-    width: 40%;
+    width: 50%;
     height: 70px;
     margin-top: 50px;
     background-image: url("../img/fondoBoton.jpg");
@@ -51,18 +52,19 @@ body{
     align-items:center;
     font-size: 2em;
     transition: width 1s;
+    transition: font-size 0.8s;
 }
 .btn:hover{
     cursor: pointer;
     font-size: 3em;
     font-weight: bold;
-    width: 60%;
+    width: 80%;
 }
 
 .ficha{
     margin-top: -15em;
     display: flex;
-    width: 40%;
+    width: 50%;
     justify-content :center;
     
 }
@@ -71,6 +73,7 @@ img{
 }
 a{
     text-decoration: none;
+    
     color: black;
 }
 /*------------------------------------------------MOVIMIENTO IMG------------------------------------------------*/
@@ -98,7 +101,7 @@ img {
     animation-direction: reverse;
 }
 /*------------------------------------------------FIN MOVIMIENTO IMG------------------------------------------------*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .ficha{
         display: none;
     }
