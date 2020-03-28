@@ -51,8 +51,7 @@ body{
     justify-content :center;
     align-items:center;
     font-size: 2em;
-    transition: width 1s;
-    transition: font-size 0.8s;
+    transition: font-size 1s, width 1s;
 }
 .btn:hover{
     cursor: pointer;
