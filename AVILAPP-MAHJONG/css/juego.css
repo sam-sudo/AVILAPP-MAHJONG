@@ -1,0 +1,22 @@
+
+
+
+table,tr,td{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.facil{
+    display: none;
+}
+
+.medio{
+    display: none;
+}
+.avanzado{
+    display: none;
+}
+
+.nidecoña{
+    display: none;
+}
