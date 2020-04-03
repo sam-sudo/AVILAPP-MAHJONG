@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 @import url("../Font/balsamiqsans-master/fonts/webfonts/balsamiqsans.css");
 
 *{
@@ -125,3 +126,25 @@ ALTO 217
 
 
 /*------------------------------------------------FIN BOTON VOLVER------------------------------------------------*/
+=======
+
+table,tr,td{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.facil{
+    display: none;
+}
+
+.medio{
+    display: none;
+}
+.avanzado{
+    display: none;
+}
+
+.nidecoña{
+    display: none;
+}
+>>>>>>> 9b5dcd87029ba115f685b8ea4534377e68e69e57
