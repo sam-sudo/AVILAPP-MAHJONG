@@ -132,7 +132,7 @@ table,tr,td{
 }
 
 .facil{
-    display: none;
+    display: flex;
 }
 
 .medio{
@@ -144,4 +144,14 @@ table,tr,td{
 
 .nidecoña{
     display: none;
+}
+section{
+    width: 100%;
+    background-color: yellow;
+}
+.juego{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    
 }
