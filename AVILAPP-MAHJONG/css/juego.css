@@ -76,7 +76,7 @@ table,tr,td{
 }
 
 .facil{
-    display: flex;
+    display: none;
 }
 
 .medio{
