@@ -54,9 +54,7 @@ function visible(){
 
 var image = document.getElementsByClassName('carta')
 
-var cambio = new Array(35)
-var aleatorio = new Array(35)
-
+var cambio = new Array(33)
 
 
 
@@ -64,20 +62,38 @@ for(var i = 0 ; i < cambio.length ; i++){
      cambio[i] = 0
 }
 
+contador = 0;
+
+var carta1
+var carta2
+
 function cambiarImagen(x){
 
-    
-
-     if (cambio[x] == 0) {
+     if (cambio[x] == 0 && contador <2) {
           image[x].src = "../img/cartas/carta1.png";
           cambio[x] = 1
-      } else {
-          image[x].src = "../img/cartas/abajo.png";
-          cambio[x] = 0
-      }
-     
+    
+          if(contador == 1){
+            carta2 = x
+          }if(contador == 0){
+          carta1 = x
+          }
+      } 
+     contador++;
+     if(contador == 2){
+        setTimeout(time,500);
+        function time(){
+        image[carta1].src = "../img/cartas/abajo.png";
+        image[carta2].src = "../img/cartas/abajo.png";
+        cambio[carta1] = 0
+        cambio[carta2] = 0
+        }
+        contador = 0;
+  }
+    }
+    
 
-}
+
 
 
 
