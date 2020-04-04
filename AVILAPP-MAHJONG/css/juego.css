@@ -72,8 +72,19 @@ footer{
 
 table,tr,td{
     border-collapse: collapse;
-    border: 1px solid black;
+    
+   width: 100%;
+   display: flex;
+   justify-content :center;
+    align-items:center;
+   
 }
+
+tr,td{
+    padding: 10px;
+}
+
+
 
 .facil{
     display: none;
