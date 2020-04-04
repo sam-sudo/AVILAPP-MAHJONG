@@ -13,8 +13,6 @@ for (i=0; i<arrVariables.length; i++) {
   if (isNaN(parseFloat(arrVariableActual[1]))){
     eval(arrVariableActual[0]+"='"+unescape(arrVariableActual[1])+"';");
     varMostrar = arrVariableActual[1]
-    //mostrar(varMostrar)
-    
 
 } else
     eval(arrVariableActual[0]+"="+arrVariableActual[1]+";");
@@ -36,10 +34,16 @@ function visible(){
               document.getElementById('tDificil').style.display= 'none';
               document.getElementById('tNideCoña').style.display= 'none';
          break;
-        case "avanzado":
+        case "dificil":
               document.getElementById('tFacil').style.display= 'none';
               document.getElementById('tMedio').style.display= 'none';
               document.getElementById('tDificil').style.display= 'flex';
+              document.getElementById('tNideCoña').style.display= 'none';
+         break;
+         case "avanzado":
+              document.getElementById('tFacil').style.display= 'none';
+              document.getElementById('tMedio').style.display= 'none';
+              document.getElementById('tDificil').style.display= 'none';
               document.getElementById('tNideCoña').style.display= 'flex';
          break;
     }
