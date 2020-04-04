@@ -28,17 +28,19 @@ function visible(){
             document.getElementById('tFacil').style.display= 'flex';
             document.getElementById('tMedio').style.display= 'none';
             document.getElementById('tDificil').style.display= 'none';
+            document.getElementById('tNideCoña').style.display= 'none';
             break;
         case "medio":
-              alert('medio sdf')
               document.getElementById('tFacil').style.display= 'none';
               document.getElementById('tMedio').style.display= 'flex';
               document.getElementById('tDificil').style.display= 'none';
+              document.getElementById('tNideCoña').style.display= 'none';
          break;
         case "avanzado":
               document.getElementById('tFacil').style.display= 'none';
               document.getElementById('tMedio').style.display= 'none';
               document.getElementById('tDificil').style.display= 'flex';
+              document.getElementById('tNideCoña').style.display= 'flex';
          break;
     }
 }
