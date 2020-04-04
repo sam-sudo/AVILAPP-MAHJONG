@@ -24,16 +24,14 @@ footer{
 }
 
 .puntuacion{
-   
-    width: 40%;
+    width:  40%;
     
 }
 
 .panel{
     display: flex;
-    height: 100%;
     flex-direction: column-reverse;
-    
+    height: 100%;
 }
 
 
@@ -47,6 +45,7 @@ footer{
     display: flex;
     background-color: transparent;
     border: none;
+    width: 100%;
     font-size: 3em;
     color: black;
 }
