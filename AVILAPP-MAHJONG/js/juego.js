@@ -3,6 +3,8 @@
 };
 window.onload = inicio;
 
+
+//---------------------------------------------CAMBIO DE NIVELES--------------------------------------------------------------
 var varMostrar;
 
 
@@ -48,3 +50,34 @@ function visible(){
          break;
     }
 }
+//---------------------------------------------FIN CAMBIO DE NIVELES--------------------------------------------------------------
+
+var image = document.getElementsByClassName('carta')
+
+var cambio = new Array(35)
+var aleatorio = new Array(35)
+
+
+
+
+for(var i = 0 ; i < cambio.length ; i++){
+     cambio[i] = 0
+}
+
+function cambiarImagen(x){
+
+    
+
+     if (cambio[x] == 0) {
+          image[x].src = "../img/cartas/carta1.png";
+          cambio[x] = 1
+      } else {
+          image[x].src = "../img/cartas/abajo.png";
+          cambio[x] = 0
+      }
+     
+
+}
+
+
+
