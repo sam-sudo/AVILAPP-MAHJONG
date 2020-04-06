@@ -87,8 +87,9 @@ function cambiarImagen(x){
         image[carta2].src = "../img/cartas/abajo.png";
         cambio[carta1] = 0
         cambio[carta2] = 0
-        }
         contador = 0;
+        }
+        
   }
     }
     
