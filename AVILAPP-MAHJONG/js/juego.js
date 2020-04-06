@@ -1,5 +1,5 @@
  function inicio(){
-    document.getElementById('puntos').value = 0;
+    document.getElementById('puntos').value=0;
 };
 window.onload = inicio;
 
@@ -75,11 +75,15 @@ function cambiarImagen(x){
     
           if(contador == 1){
             carta2 = x
-          }if(contador == 0){
-          carta1 = x
+            contador++;
+          }
+          if(contador == 0){
+            carta1 = x
+            contador++;
           }
       } 
-     contador++;
+     
+     //si las dos imagenes no son iguales se dan la vuelta
      if(contador == 2){
         setTimeout(time,500);
         function time(){
@@ -91,7 +95,7 @@ function cambiarImagen(x){
         }
         
   }
-    }
+}
     
 
 

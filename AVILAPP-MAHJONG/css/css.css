@@ -60,6 +60,34 @@ body{
     width: 80%;
 }
 
+
+
+#btnSonido{
+    width: 30%;
+    height: 70px;
+    margin-top: 50px;
+    background-image: url("../img/fondoBoton.jpg");
+    border: none;
+    border-radius: 10px;
+    
+    display: flex;
+    text-align: center;
+    justify-content :center;
+    align-items:center;
+    
+}
+
+.divSilencio{
+    position: absolute;
+     bottom: 0;
+     right: 0;
+     margin-bottom: 2em;
+     width: 20%;
+}
+.divSilencio img{
+    height: 3em;
+}
+
 .ficha{
     margin-top: -15em;
     display: flex;
@@ -67,7 +95,7 @@ body{
     justify-content :center;
     
 }
-img{
+#ficha_move{
     height: 200px;
 }
 a{
@@ -80,13 +108,13 @@ a{
     to {transform: rotate(360deg);}}
 @-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
   to {-webkit-transform: rotate(360deg);}}
-img{
+#ficha_move{
     -webkit-animation: 5s rotate linear infinite;
     animation: 10s rotate linear infinite;
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
 }
-img:hover{
+#ficha_move:hover{
     -webkit-animation: 1s rotate linear infinite;
     animation: 1s rotate linear infinite;
     -webkit-transform-origin: 50% 50%;
@@ -95,7 +123,7 @@ img:hover{
     animation-direction: reverse;
 }
 
-img {
+#ficha_move {
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
 }
@@ -120,5 +148,19 @@ img {
         text-align: center;
         justify-content :center;
         align-items: center;
+    }
+    #btnSonido{
+        width: 100%;
+        height: 70px;
+        margin-top: 50px;
+        background-image: url("../img/fondoBoton.jpg");
+        border: none;
+        border-radius: 10px;
+        
+        display: flex;
+        text-align: center;
+        justify-content :center;
+        align-items:center;
+        
     }
   }
