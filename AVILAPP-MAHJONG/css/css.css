@@ -84,8 +84,17 @@ body{
      margin-bottom: 2em;
      width: 20%;
 }
+#btnSonido:hover #imgSonido{
+    height: 3.5em;
+}
+
+
 .divSilencio img{
     height: 3em;
+}
+
+.divSilencio img:hover{
+    height: 3.5em;
 }
 
 .ficha{
@@ -128,6 +137,71 @@ a{
     animation-direction: reverse;
 }
 /*------------------------------------------------FIN MOVIMIENTO IMG------------------------------------------------*/
+
+@media only screen and (min-width:769px) and (max-width:1024px) {
+    .ficha{
+        display: none;
+    }
+    .nombre{
+        margin: 0 auto;
+        font-size: 2em;
+        
+    }
+    .btn{
+        font-size: 1em;
+    }
+    .btn:hover{
+        font-size: 1em;
+    }
+    .menu{
+        width: 100%;
+        text-align: center;
+        justify-content :center;
+        align-items: center;
+    }
+    #btnSonido{
+        width: 100%;
+        height: 70px;
+        margin-top: 50px;
+        background-image: url("../img/fondoBoton.jpg");
+        border: none;
+        border-radius: 10px;
+        
+        display: flex;
+        text-align: center;
+        justify-content :center;
+        align-items:center;
+        
+    }
+   
+
+    .btn{
+        width: 50%;
+        height: 70px;
+        margin-top: 50px;
+        background-image: url("../img/fondoBoton.jpg");
+        border: none;
+        border-radius: 10px;
+        -webkit-box-shadow: 10px 10px 32px 6px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 32px 6px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 32px 6px rgba(0,0,0,0.75);
+        display: flex;
+        text-align: center;
+        justify-content :center;
+        align-items:center;
+        font-size: 2em;
+        transition: font-size 1s, width 1s;
+    }
+    .btn:hover{
+        cursor: pointer;
+        font-size: 3em;
+        font-weight: bold;
+        width: 80%;
+    }
+
+  }
+
+
 @media only screen and (max-width: 768px) {
     .ficha{
         display: none;
@@ -163,4 +237,29 @@ a{
         align-items:center;
         
     }
+
+    .btn{
+        width: 50%;
+        height: 70px;
+        margin-top: 50px;
+        background-image: url("../img/fondoBoton.jpg");
+        border: none;
+        border-radius: 10px;
+        -webkit-box-shadow: 10px 10px 32px 6px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 32px 6px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 32px 6px rgba(0,0,0,0.75);
+        display: flex;
+        text-align: center;
+        justify-content :center;
+        align-items:center;
+        font-size: 2em;
+        transition: font-size 1s, width 1s;
+    }
+    .btn:hover{
+        cursor: pointer;
+        font-size: 3em;
+        font-weight: bold;
+        width: 80%;
+    }
+
   }
