@@ -15,7 +15,6 @@ function auudiosStop() {
     reproducir.pause()
     
 }
-//----------------------------FIN SONIDO BOTON-----------------------------------
 
 var image = document.getElementById('imgSonido')
 
@@ -34,4 +33,11 @@ function cambiarImagen(){
         auudiosStop();
       }
      
+}
+//----------------------------FIN SONIDO BOTON-----------------------------------
+
+function rutaNiveles(){
+  var ruta = "html/niveles.html?sound="+audio
+  location.href = ruta
+
 }
