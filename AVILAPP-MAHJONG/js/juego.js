@@ -124,7 +124,7 @@ function cambiarImagenFacil(card){
         firstFacil = card;
         document.images[card].src = cartas[card];
         numClickFacil = 1;
-    }else if(numClickFacil == 1){
+    }else if((numClickFacil == 1)){
         numClickFacil = 2;
         secondFacil = card;
         document.images[card].src = cartas[card];
@@ -132,15 +132,17 @@ function cambiarImagenFacil(card){
     }
 }
 
+
 function controlFacil(){
     clearInterval(timer);
     numClickFacil = 0;
 
-    var punto = 0
+    
 
-    if(cartas[firstFacil] == cartas[secondFacil]){
+    if(cartas[firstFacil] == cartas[secondFacil] && firstFacil != secondFacil){
         matchFacil++;
-        punto += 10
+        puntos(15)
+        
         document.images[firstFacil].style.visibility = 'hidden'
         document.images[secondFacil].style.visibility = 'hidden'
         
@@ -148,24 +150,23 @@ function controlFacil(){
 
         if(matchFacil == 4){
             desaparecer()
-            congratulation()
-            location.href = '../html/puntuacion.html'
+            location.href = '../html/puntuacion.html?nombre='+congratulation()
         }
     }else{
-        punto -= 4
+        puntos(-4)
         document.images[firstFacil].src = "../img/cartas/abajo.png"
         document.images[secondFacil].src = "../img/cartas/abajo.png"
       
       }
-      puntos(punto)
+      
+      
   }
 
 
 
   function congratulation(){
 
-    prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
-
+    return prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
   }
 
 function desaparecer(){
@@ -173,12 +174,17 @@ function desaparecer(){
     document.getElementById('tFacil').style.display= 'none';
 
 }
+var punto = 0
 
 function puntos(x){
-
-    if(x != 0)
-    document.getElementById('puntos').value += punto;
-
+    punto += parseInt(x)
+    if(punto <= 0){
+        punto=0
+        document.getElementById('puntos').value = punto
+    }else{
+    punto+=parseInt(x)
+    document.getElementById('puntos').value = punto;
+    }
 }
 
 
