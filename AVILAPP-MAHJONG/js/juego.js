@@ -1,5 +1,5 @@
  function inicio(){
-    document.getElementById('puntos').value = 0;
+    document.getElementById('puntos').value=0;
 };
 window.onload = inicio;
 
@@ -136,6 +136,7 @@ function controlFacil(){
 
 
 
+<<<<<<< HEAD
 function shuffleMedio(array){
   var currentIndex = array.length, temporaryValue, randomIndex;
   while(0 !==currentIndex){
@@ -180,6 +181,34 @@ function controlMedio(){
       document.images[first].src = "../img/cartas/abajo.png"
       document.images[second].src = "../img/cartas/abajo.png"
   }
+=======
+     if (cambio[x] == 0 && contador <2) {
+          image[x].src = "../img/cartas/carta1.png";
+          cambio[x] = 1
+    
+          if(contador == 1){
+            carta2 = x
+            contador++;
+          }
+          if(contador == 0){
+            carta1 = x
+            contador++;
+          }
+      } 
+     
+     //si las dos imagenes no son iguales se dan la vuelta
+     if(contador == 2){
+        setTimeout(time,500);
+        function time(){
+        image[carta1].src = "../img/cartas/abajo.png";
+        image[carta2].src = "../img/cartas/abajo.png";
+        cambio[carta1] = 0
+        cambio[carta2] = 0
+        contador = 0;
+        }
+        
+  }
+>>>>>>> 4958b4842da992b591564cb53ca81adbcfd75602
 }
     
 

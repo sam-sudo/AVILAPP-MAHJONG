@@ -19,14 +19,20 @@
     </div>
     <div class="container">
         <div class="menu">
-            <a href="html/niveles.html" class="btn btn-niveles sonido" onmouseover="auudios()">NIVELES</a>
+            <a href="javascript:rutaNiveles()" id="niveles" class="btn btn-niveles sonido" onmouseover="auudios()">NIVELES</a>
             <a href="html/puntuacion.html" class="btn btn-puntuacion sonido" onmouseover="auudios()">PUNTUACIÓN</a>
             <a href="html/creditos.html" class="btn btn-creditos sonido" onmouseover="auudios()">CRÉDITOS</a>
         </div>
         <div class="ficha">
-            <img src="img/mahjonImagen.png" alt="ficha">
+            <img id="ficha_move" src="img/mahjonImagen.png" alt="ficha">
         </div>
-        <a href=""></a>
+    </div>
+    <div class="divSilencio">
+        <button onclick="cambiarImagen()" id="btnSonido">
+            <figure id="botonSonido">
+                <img id="imgSonido" src="img/ico/mute.png"   alt="mute">
+            </figure>
+        </button>
     </div>
 </body>
 </html>

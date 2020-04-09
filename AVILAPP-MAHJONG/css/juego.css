@@ -9,18 +9,23 @@
 }
 body{
     background-image: url("../img/fondo.jpg");
+    
 }
 
 header{
     width: 100%;
     display: flex;
+    
     flex-direction: row;
 }
 
 footer{
     position: absolute;
      bottom: 0;
-     width: 99%;
+     right: 0;
+     
+     
+     width: 20%;
 }
 
 .puntuacion{
@@ -48,6 +53,7 @@ footer{
     width: 100%;
     font-size: 3em;
     color: black;
+    
 }
 .panel > *{
     display: flex;
@@ -136,7 +142,7 @@ ALTO 217
 .btn-volver{
     display: flex;
     background-color: rebeccapurple;
-    width: 15%;
+    width: 100%;
     height: 70px;
     margin-top: 50px;
     background-image: url("../img/fondoBoton.jpg");
