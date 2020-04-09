@@ -52,125 +52,175 @@ function visible(){
 }
 //---------------------------------------------FIN CAMBIO DE NIVELES--------------------------------------------------------------
 
+var numClickFacil = 0;
+var firstFacil;
+var secondFacil;
+var matchFacil = 0;
+
 var numClick = 0;
 var first;
 var second;
 var match = 0;
 
-var cardsFacil = [];
-cardsFacil[0] = '../img/cartas/carta1.png';
-cardsFacil[1] = '../img/cartas/carta1.png';
-cardsFacil[2] = '../img/cartas/carta2.png';
-cardsFacil[3] = '../img/cartas/carta2.png';
-cardsFacil[4] = '../img/cartas/carta3.png';
-cardsFacil[5] = '../img/cartas/carta3.png';
-cardsFacil[6] = '../img/cartas/carta4.png';
-cardsFacil[7] = '../img/cartas/carta4.png';
-var cardsMedio = [];
-cardsMedio[18] = '../img/cartas/carta5.png';
-cardsMedio[19] = '../img/cartas/carta5.png';
-cardsMedio[20] = '../img/cartas/carta6.png';
-cardsMedio[21] = '../img/cartas/carta6.png';
-cardsMedio[22] = '../img/cartas/carta7.png';
-cardsMedio[23] = '../img/cartas/carta7.png';
-cardsMedio[24] = '../img/cartas/carta8.png';
-cardsMedio[25] = '../img/cartas/carta8.png';
-cardsMedio[8] = '../img/cartas/carta9.png';
-cardsMedio[9] = '../img/cartas/carta9.png';
-cardsMedio[10] = '../img/cartas/carta10.png';
-cardsMedio[11] = '../img/cartas/carta10.png';
-cardsMedio[12] = '../img/cartas/carta11.png';
-cardsMedio[13] = '../img/cartas/carta11.png';
-cardsMedio[14] = '../img/cartas/carta12.png';
-cardsMedio[15] = '../img/cartas/carta12.png';
-cardsMedio[16] = '../img/cartas/carta13.png';
-cardsMedio[17] = '../img/cartas/carta13.png';
+var cartas = [];
+cartas[0] = '../img/cartas/carta1.png';
+cartas[1] = '../img/cartas/carta1.png';
+cartas[2] = '../img/cartas/carta2.png';
+cartas[3] = '../img/cartas/carta2.png';
+cartas[4] = '../img/cartas/carta3.png';
+cartas[5] = '../img/cartas/carta3.png';
+cartas[6] = '../img/cartas/carta4.png';
+cartas[7] = '../img/cartas/carta4.png';
+cartas[8] = '../img/cartas/carta5.png';
+cartas[9] = '../img/cartas/carta5.png';
+cartas[10] = '../img/cartas/carta6.png';
+cartas[11] = '../img/cartas/carta6.png';
+cartas[12] = '../img/cartas/carta7.png';
+cartas[13] = '../img/cartas/carta7.png';
+cartas[14] = '../img/cartas/carta8.png';
+cartas[15] = '../img/cartas/carta8.png';
+cartas[16] = '../img/cartas/carta9.png';
+cartas[17] = '../img/cartas/carta9.png';
+cartas[18] = '../img/cartas/carta10.png';
+cartas[19] = '../img/cartas/carta10.png';
+cartas[20] = '../img/cartas/carta11.png';
+cartas[21] = '../img/cartas/carta11.png';
+cartas[22] = '../img/cartas/carta12.png';
+cartas[23] = '../img/cartas/carta12.png';
+cartas[24] = '../img/cartas/carta13.png';
+cartas[25] = '../img/cartas/carta13.png';
 
 
+var parejas = []
+var parejas2 = []
+
+
+
+
+
+//------------------------------------------------------------------------------------------
 
 function shuffleFacil(array){
-    var currentIndex = array.length, temporaryValue, randomIndex;
-    while(0 !==currentIndex){
+    var currentIndex = 8, temporaryValue, randomIndex;
+    while(0 !=currentIndex){
         randomIndex = Math.floor(Math.random()*currentIndex);
-        currentIndex -=1;
-
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
+        
+        if(randomIndex <=7){
+            currentIndex -=1;
+            
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
     }
     return array;
+    
 }
 
 var f;
-f = shuffleFacil(cardsFacil);
+f = shuffleFacil(cartas);
 function cambiarImagenFacil(card){
-    if(numClick==0){
-        first = card;
-        document.images[card].src = cardsFacil[card];
-        numClick = 1;
-    }else if(numClick == 1){
-        numClick = 2;
-        second = card;
-        document.images[card].src = cardsFacil[card];
+    if(numClickFacil==0){
+        firstFacil = card;
+        document.images[card].src = cartas[card];
+        numClickFacil = 1;
+    }else if(numClickFacil == 1){
+        numClickFacil = 2;
+        secondFacil = card;
+        document.images[card].src = cartas[card];
         timer = setInterval(controlFacil, 500);
-    }else{
-        alert('Pulsa en una imagen')
     }
 }
 
 function controlFacil(){
-  clearInterval(timer);
-  numClick = 0;
-  if(cardsFacil[second] == cardsFacil[first]){
-      match++;
-      if(match == 4){
-          alert('Nivel Facil Completado');
-          location.reload();
+    clearInterval(timer);
+    numClickFacil = 0;
+
+    var punto = 0
+
+    if(cartas[firstFacil] == cartas[secondFacil]){
+        matchFacil++;
+        punto += 10
+        document.images[firstFacil].style.visibility = 'hidden'
+        document.images[secondFacil].style.visibility = 'hidden'
+        
+        
+
+        if(matchFacil == 4){
+            desaparecer()
+            congratulation()
+            location.href = '../html/puntuacion.html'
+        }
+    }else{
+        punto -= 4
+        document.images[firstFacil].src = "../img/cartas/abajo.png"
+        document.images[secondFacil].src = "../img/cartas/abajo.png"
+      
       }
-  }else{
-      document.images[first].src = "../img/cartas/abajo.png"
-      document.images[second].src = "../img/cartas/abajo.png"
+      puntos(punto)
   }
+
+
+
+  function congratulation(){
+
+    prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
+
+  }
+
+function desaparecer(){
+
+    document.getElementById('tFacil').style.display= 'none';
+
+}
+
+function puntos(x){
+
+    if(x != 0)
+    document.getElementById('puntos').value += punto;
+
 }
 
 
-
+//------------------------MEDIO-------------------------------------------------------------------
 
 function shuffleMedio(array){
-  var currentIndex = array.length, temporaryValue, randomIndex;
-  while(0 !==currentIndex){
-      randomIndex = Math.floor(Math.random()*currentIndex);
-      currentIndex -=1;
-
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-  }
-  return array;
+    var currentIndex = 26, temporaryValue, randomIndex;
+    while(8 !=currentIndex){
+        randomIndex = Math.floor(Math.random()*currentIndex);
+        if(randomIndex >7){
+            currentIndex -=1;
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+        
+        
+    }
+    return array;
+    
 }
 
-var m;
-m = shuffleMedio(cardsMedio);
+var g;
+g = shuffleMedio(cartas);
 function cambiarImagenMedia(card){
+    
     if(numClick==0){
         first = card;
-        document.images[card].src = cardsMedio[card];
+        document.images[card].src = cartas[card];
         numClick = 1;
     }else if(numClick == 1){
         numClick = 2;
         second = card;
-        document.images[card].src = cardsMedio[card];
+        document.images[card].src = cartas[card];
         timer = setInterval(controlMedio, 500);
-    }else{
-        alert('You can click on an image once')
     }
 }
-
 
 function controlMedio(){
   clearInterval(timer);
   numClick = 0;
-  if(cardsMedio[second] == cardsMedio[first]){
+  if(cartas[second] == cartas[first] ){
       match++;
       if(match == 9){
           alert('Nivel Medio Completado');
@@ -181,9 +231,11 @@ function controlMedio(){
       document.images[second].src = "../img/cartas/abajo.png"
   }
 }
-    
 
 
 
 
+
+
+//------------------------FIN MEDIO-------------------------------------------------------------------
 
