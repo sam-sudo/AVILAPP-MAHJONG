@@ -92,25 +92,24 @@ cartas[28] = '../img/cartas/carta15.png';
 cartas[29] = '../img/cartas/carta15.png';
 cartas[30] = '../img/cartas/carta16.png';
 cartas[31] = '../img/cartas/carta16.png';
-cartas[31] = '../img/cartas/carta17.png';
 cartas[32] = '../img/cartas/carta17.png';
-cartas[33] = '../img/cartas/carta18.png';
+cartas[33] = '../img/cartas/carta17.png';
 cartas[34] = '../img/cartas/carta18.png';
-cartas[35] = '../img/cartas/carta19.png';
+cartas[35] = '../img/cartas/carta18.png';
 cartas[36] = '../img/cartas/carta19.png';
-cartas[37] = '../img/cartas/carta20.png';
+cartas[37] = '../img/cartas/carta19.png';
 cartas[38] = '../img/cartas/carta20.png';
-cartas[39] = '../img/cartas/carta21.png';
+cartas[39] = '../img/cartas/carta20.png';
 cartas[40] = '../img/cartas/carta21.png';
-cartas[41] = '../img/cartas/carta22.png';
+cartas[41] = '../img/cartas/carta21.png';
 cartas[42] = '../img/cartas/carta22.png';
-cartas[43] = '../img/cartas/carta23.png';
+cartas[43] = '../img/cartas/carta22.png';
 cartas[44] = '../img/cartas/carta23.png';
-cartas[45] = '../img/cartas/carta24.png';
+cartas[45] = '../img/cartas/carta23.png';
 cartas[46] = '../img/cartas/carta24.png';
-cartas[47] = '../img/cartas/carta25.png';
+cartas[47] = '../img/cartas/carta24.png';
 cartas[48] = '../img/cartas/carta25.png';
-cartas[49] = '../img/cartas/carta26.png';
+cartas[49] = '../img/cartas/carta25.png';
 
 
 var parejas = []
@@ -252,9 +251,7 @@ function controlMedio(){
       puntos(-4)
   }
 } 
-function congratulation(){
-    return prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
-  }
+
 
 
 
@@ -266,88 +263,15 @@ function congratulation(){
 
 //----------------------------------------DIFICIL /AVANZADO-------------------------------------------
 
-
-/*var numClickDificil = 0;
-var firstDificil;
-var secondDificil;
-var matchDificil = 0;
-
-
-
-function shuffleDificil(array){
-    var currentIndex = 52, temporaryValue, randomIndex;
-    while(26 !=currentIndex){
-        randomIndex = Math.floor(Math.random()*currentIndex);
-        
-        if(randomIndex >25 && randomIndex < 53){
-            currentIndex -=1;
-            
-            temporaryValue = array[currentIndex];
-            array[currentIndex] = array[randomIndex];
-            array[randomIndex] = temporaryValue;
-        }
-    }
-    return array;
-    
-}
-
-var D;
-D = shuffleDificil(cartas);
-function cambiarImagenDificil(card){
-    if(numClickDificil==0){
-        firstDificil = card;
-        document.images[card].src = cartas[card];
-        numClickDificil = 1;
-    }else if((numClickDificil == 1)){
-        numClickDificil = 2;
-        secondDificil = card;
-        document.images[card].src = cartas[card];
-        timer = setInterval(controlDificil(), 500);
-    }
-}
-
-
-function controlDificil(){
-    clearInterval(timer);
-    numClickDificil = 0;
-
-    
-
-    if(cartas[firstDificil] == cartas[secondDificil] ){
-        matchDificil++;
-       alert('pareja')
-        
-        document.images[firstDificil].style.visibility = 'hidden'
-        document.images[secondDificil].style.visibility = 'hidden'
-        
-        
-
-        if(matchDificil == 25){
-          
-           
-        }
-    }else{
-        alert('diferente')
-     
-        document.images[firstDificil].src = "../img/cartas/abajo.png"
-        document.images[secondDificil].src = "../img/cartas/abajo.png"
-      
-      }
-      
-      
-  }
-*/
-
-
 var numClickDificil = 0;
 var firstDificil;
 var secondDificil;
 var matchDificil = 0;
 function shuffleDificil(array){
-    var currentIndex = 52, temporaryValue, randomIndex;
+    var currentIndex = 49, temporaryValue, randomIndex;
     while(27 !=currentIndex){
         randomIndex = Math.floor(Math.random()*currentIndex);
-        if(randomIndex >26 ){
+        if(randomIndex >25 ){
             currentIndex -=1;
             temporaryValue = array[currentIndex];
             array[currentIndex] = array[randomIndex];
@@ -380,10 +304,12 @@ function controlDificil(){
 
   if(cartas[secondDificil] == cartas[firstDificil] && firstDificil != secondDificil){
       matchMedio++;
-      document.images[firstMedio].style.visibility = 'hidden'
-      document.images[secondMedio].style.visibility = 'hidden'
-      if(matchMedio == 9){
-          alert('ole oleeee')
+      puntos(15)
+      document.images[firstDificil].style.visibility = 'hidden'
+      document.images[secondDificil].style.visibility = 'hidden'
+      if(matchMedio == 12){
+        alert('ole oleeee')
+        location.href = '../html/puntuacion.html?nombre='+congratulation()
       }
   }else{
       document.images[firstDificil].src = "../img/cartas/abajo.png"
