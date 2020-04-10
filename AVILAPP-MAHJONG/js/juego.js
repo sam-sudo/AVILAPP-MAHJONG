@@ -57,10 +57,7 @@ var firstFacil;
 var secondFacil;
 var matchFacil = 0;
 
-var numClick = 0;
-var first;
-var second;
-var match = 0;
+
 
 var cartas = [];
 cartas[0] = '../img/cartas/carta1.png';
@@ -163,19 +160,14 @@ function cambiarImagenFacil(card){
 
 function controlFacil(){
     clearInterval(timer);
-    numClickFacil = 0;
 
-    
+    numClickFacil = 0;
 
     if(cartas[firstFacil] == cartas[secondFacil] && firstFacil != secondFacil){
         matchFacil++;
         puntos(15)
-        
         document.images[firstFacil].style.visibility = 'hidden'
         document.images[secondFacil].style.visibility = 'hidden'
-        
-        
-
         if(matchFacil == 4){
             desaparecer()
             location.href = '../html/puntuacion.html?nombre='+congratulation()
@@ -184,24 +176,16 @@ function controlFacil(){
         puntos(-4)
         document.images[firstFacil].src = "../img/cartas/abajo.png"
         document.images[secondFacil].src = "../img/cartas/abajo.png"
-      
       }
-      
-      
   }
-
-
-
   function congratulation(){
-
     return prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
   }
 
 function desaparecer(){
-
     document.getElementById('tFacil').style.display= 'none';
-
 }
+
 var punto = 0
 
 function puntos(x){
@@ -217,7 +201,10 @@ function puntos(x){
 
 
 //------------------------MEDIO-------------------------------------------------------------------
-
+var numClickMedio = 0;
+var firstMedio;
+var secondMedio;
+var matchMedio = 0;
 function shuffleMedio(array){
     var currentIndex = 26, temporaryValue, randomIndex;
     while(8 !=currentIndex){
@@ -228,24 +215,21 @@ function shuffleMedio(array){
             array[currentIndex] = array[randomIndex];
             array[randomIndex] = temporaryValue;
         }
-        
-        
     }
     return array;
-    
 }
 
 var g;
 g = shuffleMedio(cartas);
 function cambiarImagenMedia(card){
     
-    if(numClick==0){
-        first = card;
+    if(numClickMedio==0){
+        firstMedio = card;
         document.images[card].src = cartas[card];
-        numClick = 1;
-    }else if(numClick == 1){
-        numClick = 2;
-        second = card;
+        numClickMedio = 1;
+    }else if(numClickMedio == 1){
+        numClickMedio = 2;
+        secondMedio = card;
         document.images[card].src = cartas[card];
         timer = setInterval(controlMedio, 500);
     }
@@ -253,18 +237,28 @@ function cambiarImagenMedia(card){
 
 function controlMedio(){
   clearInterval(timer);
-  numClick = 0;
-  if(cartas[second] == cartas[first] ){
-      match++;
-      if(match == 9){
-          alert('Nivel Medio Completado');
-          location.reload();
+
+  numClickMedio = 0;
+
+  if(cartas[secondMedio] == cartas[firstMedio] && firstMedio != secondMedio){
+      matchMedio++;
+      puntos(15)
+      document.images[firstMedio].style.visibility = 'hidden'
+      document.images[secondMedio].style.visibility = 'hidden'
+      if(matchMedio == 9){
+          alert('ole oleeee')
+          location.href = '../html/puntuacion.html?nombre='+congratulation()
       }
   }else{
-      document.images[first].src = "../img/cartas/abajo.png"
-      document.images[second].src = "../img/cartas/abajo.png"
+      document.images[firstMedio].src = "../img/cartas/abajo.png"
+      document.images[secondMedio].src = "../img/cartas/abajo.png"
+      puntos(-4)
   }
-}
+} 
+function congratulation(){
+    return prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
+  }
+
 
 
 
