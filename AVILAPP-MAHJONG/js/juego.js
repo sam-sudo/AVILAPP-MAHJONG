@@ -312,7 +312,8 @@ function controlDificil(){
         location.href = '../html/puntuacion.html?nombre='+congratulation()
       }
   }else{
+    puntos(-4)
       document.images[firstDificil].src = "../img/cartas/abajo.png"
       document.images[secondDificil].src = "../img/cartas/abajo.png"
   }
-} 
+}
