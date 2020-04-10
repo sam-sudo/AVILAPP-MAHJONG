@@ -270,6 +270,73 @@ function congratulation(){
 //----------------------------------------DIFICIL /AVANZADO-------------------------------------------
 
 
+/*prueba de codigo dos
+
+
+
+var numClickDificil = 0;
+var firstDificil;
+var secondDificil;
+var matchDificil = 0;
+function shuffleDificil(array){
+    var currentIndex = 52, temporaryValue, randomIndex;
+    while(27 !=currentIndex){
+        randomIndex = Math.floor(Math.random()*currentIndex);
+        if(randomIndex >26 ){
+            currentIndex -=1;
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+    }
+    return array;
+}
+
+var h;
+h = shuffleDificil(cartas);
+function cambiarImagenDificil(card){
+    
+    if(numClickDificil==0){
+        firstDificil = card;
+        document.images[card].src = cartas[card];
+        numClickDificil = 1;
+    }else if(numClickDificil == 1){
+        numClickDificil = 2;
+        secondDificil = card;
+        document.images[card].src = cartas[card];
+        timer = setInterval(controlDificil(), 500);
+    }
+}
+
+function controlDificil(){
+  clearInterval(timer);
+
+  numClickDificil = 0;
+
+  if(cartas[secondDificil] == cartas[firstDificil] && firstDificil != secondDificil){
+      matchMedio++;
+      puntos(15)
+      document.images[firstDificil].style.visibility = 'hidden'
+      document.images[secondDificil].style.visibility = 'hidden'
+      if(matchDificil == 9){
+          alert('ole oleeee')
+          location.href = '../html/puntuacion.html?nombre='+congratulation()
+      }
+  }else{
+      document.images[firstDificil].src = "../img/cartas/abajo.png"
+      document.images[secondDificil].src = "../img/cartas/abajo.png"
+      puntos(-4)
+  }
+} 
+function congratulation(){
+    return prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
+  }
+
+
+*/
+
+/*----------------------------------------------------------------------------------------------------------- 
+prueba de codigo uno
 var numClickDificil = 0;
 var firstDificil;
 var secondDificil;
@@ -339,4 +406,4 @@ function controlDificil(){
       
       
   }
-
+*/
