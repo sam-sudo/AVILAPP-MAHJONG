@@ -1,0 +1,15 @@
+{
+    "users": [
+      {
+        "name": "Molecule Man",
+        "level": "facil",
+        "puntos": "200"
+      },
+      {
+        "name": "Sam",
+        "level": "facil",
+        "puntos": "80"
+      }
+      
+    ]
+  }
