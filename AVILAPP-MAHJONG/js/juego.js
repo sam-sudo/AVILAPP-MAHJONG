@@ -57,10 +57,7 @@ var firstFacil;
 var secondFacil;
 var matchFacil = 0;
 
-var numClick = 0;
-var first;
-var second;
-var match = 0;
+
 
 var cartas = [];
 cartas[0] = '../img/cartas/carta1.png';
@@ -89,6 +86,30 @@ cartas[22] = '../img/cartas/carta12.png';
 cartas[23] = '../img/cartas/carta12.png';
 cartas[24] = '../img/cartas/carta13.png';
 cartas[25] = '../img/cartas/carta13.png';
+cartas[26] = '../img/cartas/carta14.png';
+cartas[27] = '../img/cartas/carta14.png';
+cartas[28] = '../img/cartas/carta15.png';
+cartas[29] = '../img/cartas/carta15.png';
+cartas[30] = '../img/cartas/carta16.png';
+cartas[31] = '../img/cartas/carta16.png';
+cartas[32] = '../img/cartas/carta17.png';
+cartas[33] = '../img/cartas/carta17.png';
+cartas[34] = '../img/cartas/carta18.png';
+cartas[35] = '../img/cartas/carta18.png';
+cartas[36] = '../img/cartas/carta19.png';
+cartas[37] = '../img/cartas/carta19.png';
+cartas[38] = '../img/cartas/carta20.png';
+cartas[39] = '../img/cartas/carta20.png';
+cartas[40] = '../img/cartas/carta21.png';
+cartas[41] = '../img/cartas/carta21.png';
+cartas[42] = '../img/cartas/carta22.png';
+cartas[43] = '../img/cartas/carta22.png';
+cartas[44] = '../img/cartas/carta23.png';
+cartas[45] = '../img/cartas/carta23.png';
+cartas[46] = '../img/cartas/carta24.png';
+cartas[47] = '../img/cartas/carta24.png';
+cartas[48] = '../img/cartas/carta25.png';
+cartas[49] = '../img/cartas/carta25.png';
 
 
 var parejas = []
@@ -135,19 +156,14 @@ function cambiarImagenFacil(card){
 
 function controlFacil(){
     clearInterval(timer);
-    numClickFacil = 0;
 
-    
+    numClickFacil = 0;
 
     if(cartas[firstFacil] == cartas[secondFacil] && firstFacil != secondFacil){
         matchFacil++;
         puntos(15)
-        
         document.images[firstFacil].style.visibility = 'hidden'
         document.images[secondFacil].style.visibility = 'hidden'
-        
-        
-
         if(matchFacil == 4){
             desaparecer()
             location.href = '../html/puntuacion.html?nombre='+congratulation()
@@ -156,24 +172,16 @@ function controlFacil(){
         puntos(-4)
         document.images[firstFacil].src = "../img/cartas/abajo.png"
         document.images[secondFacil].src = "../img/cartas/abajo.png"
-      
       }
-      
-      
   }
-
-
-
   function congratulation(){
-
     return prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
   }
 
 function desaparecer(){
-
     document.getElementById('tFacil').style.display= 'none';
-
 }
+
 var punto = 0
 
 function puntos(x){
@@ -189,35 +197,35 @@ function puntos(x){
 
 
 //------------------------MEDIO-------------------------------------------------------------------
-
+var numClickMedio = 0;
+var firstMedio;
+var secondMedio;
+var matchMedio = 0;
 function shuffleMedio(array){
     var currentIndex = 26, temporaryValue, randomIndex;
     while(8 !=currentIndex){
         randomIndex = Math.floor(Math.random()*currentIndex);
-        if(randomIndex >7){
+        if(randomIndex >7 ){
             currentIndex -=1;
             temporaryValue = array[currentIndex];
             array[currentIndex] = array[randomIndex];
             array[randomIndex] = temporaryValue;
         }
-        
-        
     }
     return array;
-    
 }
 
 var g;
 g = shuffleMedio(cartas);
 function cambiarImagenMedia(card){
     
-    if(numClick==0){
-        first = card;
+    if(numClickMedio==0){
+        firstMedio = card;
         document.images[card].src = cartas[card];
-        numClick = 1;
-    }else if(numClick == 1){
-        numClick = 2;
-        second = card;
+        numClickMedio = 1;
+    }else if(numClickMedio == 1){
+        numClickMedio = 2;
+        secondMedio = card;
         document.images[card].src = cartas[card];
         timer = setInterval(controlMedio, 500);
     }
@@ -225,18 +233,26 @@ function cambiarImagenMedia(card){
 
 function controlMedio(){
   clearInterval(timer);
-  numClick = 0;
-  if(cartas[second] == cartas[first] ){
-      match++;
-      if(match == 9){
-          alert('Nivel Medio Completado');
-          location.reload();
+
+  numClickMedio = 0;
+
+  if(cartas[secondMedio] == cartas[firstMedio] && firstMedio != secondMedio){
+      matchMedio++;
+      puntos(15)
+      document.images[firstMedio].style.visibility = 'hidden'
+      document.images[secondMedio].style.visibility = 'hidden'
+      if(matchMedio == 9){
+          alert('ole oleeee')
+          location.href = '../html/puntuacion.html?nombre='+congratulation()
       }
   }else{
-      document.images[first].src = "../img/cartas/abajo.png"
-      document.images[second].src = "../img/cartas/abajo.png"
+      document.images[firstMedio].src = "../img/cartas/abajo.png"
+      document.images[secondMedio].src = "../img/cartas/abajo.png"
+      puntos(-4)
   }
-}
+} 
+
+
 
 
 
@@ -245,3 +261,59 @@ function controlMedio(){
 
 //------------------------FIN MEDIO-------------------------------------------------------------------
 
+//----------------------------------------DIFICIL /AVANZADO-------------------------------------------
+
+var numClickDificil = 0;
+var firstDificil;
+var secondDificil;
+var matchDificil = 0;
+function shuffleDificil(array){
+    var currentIndex = 49, temporaryValue, randomIndex;
+    while(27 !=currentIndex){
+        randomIndex = Math.floor(Math.random()*currentIndex);
+        if(randomIndex >25 ){
+            currentIndex -=1;
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+    }
+    return array;
+}
+
+var d;
+d = shuffleDificil(cartas);
+function cambiarImagenDificil(card){
+    
+    if(numClickDificil==0){
+        firstDificil = card;
+        document.images[card].src = cartas[card];
+        numClickDificil = 1;
+    }else if(numClickDificil == 1){
+        numClickDificil = 2;
+        secondDificil = card;
+        document.images[card].src = cartas[card];
+        timer = setInterval(controlDificil, 500);
+    }
+}
+
+function controlDificil(){
+  clearInterval(timer);
+
+  numClickDificil = 0;
+
+  if(cartas[secondDificil] == cartas[firstDificil] && firstDificil != secondDificil){
+      matchMedio++;
+      puntos(15)
+      document.images[firstDificil].style.visibility = 'hidden'
+      document.images[secondDificil].style.visibility = 'hidden'
+      if(matchMedio == 12){
+        alert('ole oleeee')
+        location.href = '../html/puntuacion.html?nombre='+congratulation()
+      }
+  }else{
+    puntos(-4)
+      document.images[firstDificil].src = "../img/cartas/abajo.png"
+      document.images[secondDificil].src = "../img/cartas/abajo.png"
+  }
+}
