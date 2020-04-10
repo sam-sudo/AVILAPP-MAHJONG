@@ -222,7 +222,7 @@ function shuffleMedio(array){
     var currentIndex = 26, temporaryValue, randomIndex;
     while(8 !=currentIndex){
         randomIndex = Math.floor(Math.random()*currentIndex);
-        if(randomIndex >7){
+        if(randomIndex >7 ){
             currentIndex -=1;
             temporaryValue = array[currentIndex];
             array[currentIndex] = array[randomIndex];
@@ -272,4 +272,77 @@ function controlMedio(){
 
 
 //------------------------FIN MEDIO-------------------------------------------------------------------
+
+//----------------------------------------DIFICIL /AVANZADO-------------------------------------------
+
+
+var numClickDificil = 0;
+var firstDificil;
+var secondDificil;
+var matchDificil = 0;
+
+
+
+function shuffleDificil(array){
+    var currentIndex = 52, temporaryValue, randomIndex;
+    while(26 !=currentIndex){
+        randomIndex = Math.floor(Math.random()*currentIndex);
+        
+        if(randomIndex >25 && randomIndex < 53){
+            currentIndex -=1;
+            
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+    }
+    return array;
+    
+}
+
+var D;
+D = shuffleDificil(cartas);
+function cambiarImagenDificil(card){
+    if(numClickDificil==0){
+        firstDificil = card;
+        document.images[card].src = cartas[card];
+        numClickDificil = 1;
+    }else if((numClickDificil == 1)){
+        numClickDificil = 2;
+        secondDificil = card;
+        document.images[card].src = cartas[card];
+        timer = setInterval(controlDificil(), 500);
+    }
+}
+
+
+function controlDificil(){
+    clearInterval(timer);
+    numClickDificil = 0;
+
+    
+
+    if(cartas[firstDificil] == cartas[secondDificil] ){
+        matchDificil++;
+       alert('pareja')
+        
+        document.images[firstDificil].style.visibility = 'hidden'
+        document.images[secondDificil].style.visibility = 'hidden'
+        
+        
+
+        if(matchDificil == 25){
+          
+           
+        }
+    }else{
+        alert('diferente')
+     
+        document.images[firstDificil].src = "../img/cartas/abajo.png"
+        document.images[secondDificil].src = "../img/cartas/abajo.png"
+      
+      }
+      
+      
+  }
 
