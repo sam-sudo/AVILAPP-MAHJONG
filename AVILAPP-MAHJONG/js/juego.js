@@ -380,7 +380,6 @@ cartasNDC[46] = '../img/cartas/carta24.png';
 cartasNDC[47] = '../img/cartas/carta24.png';
 cartasNDC[48] = '../img/cartas/carta25.png';
 cartasNDC[49] = '../img/cartas/carta25.png';
-
 cartasNDC[50] = '../img/cartas/carta13.png';
 cartasNDC[51] = '../img/cartas/carta13.png';
 cartasNDC[52] = '../img/cartas/carta14.png';
@@ -459,3 +458,8 @@ function controlNDC(){
       document.images[secondNDC].src = "../img/cartas/abajo.png"
   }
 }
+
+function inicio(){
+    document.getElementById('vidas').value=0;
+};
+window.onload = inicio;
