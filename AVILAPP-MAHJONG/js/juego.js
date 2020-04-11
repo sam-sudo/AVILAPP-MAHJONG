@@ -1,6 +1,6 @@
  function inicio(){
     document.getElementById('puntos').value=0;
-    document.getElementById('vidas').value=3;
+    document.getElementById('vidas').value=10;
 };
 window.onload = inicio;
 
@@ -329,7 +329,7 @@ function controlDificil(){
 
 //----------------------------------------Ni de coña-------------------------------------------
 
-var vidas = 3
+var vidas = 10
 
 function VidasJuego(x){
     vidas += parseInt(x)
@@ -341,20 +341,6 @@ function VidasJuego(x){
     document.getElementById('vidas').value = vidas;
     }
 }
-var punto = 0
-
-/*function puntos(x){
-    punto += parseInt(x)
-    if(punto <= 0){
-        punto=0
-        document.getElementById('puntos').value = punto
-    }else{
-    punto+=parseInt(x)
-    document.getElementById('puntos').value = punto;
-    }
-}
-
-*/
 
 
 
@@ -495,6 +481,10 @@ function controlNDC(){
     VidasJuego(-1);
       document.images[firstNDC].src = "../img/cartas/abajo.png"
       document.images[secondNDC].src = "../img/cartas/abajo.png"
+      if(vidas == 0){
+          alert('Perdiste')
+          location.reload();
+      }
   }
 }
 
