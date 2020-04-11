@@ -8,12 +8,7 @@
 body{
     background-image: url("../img/fondo.jpg");
 }
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
+
 .nombre{
     margin: 0 auto;
     font-size: 3em;
@@ -24,6 +19,49 @@ body{
     -webkit-text-stroke: 2px white;
 
 }
+
+footer{
+    position: absolute;
+     bottom: 0;
+     width: 99%;
+}
+
+
+
+
+table{
+    margin: auto;
+    width: 50%;
+    height: 25em;
+    background-color: bisque;
+}
+
+table{
+    border-collapse:collapse ;
+    border: solid black 0.5em;
+}
+th{
+    font-size: 1.5em;
+}
+th,td{
+    border-collapse:collapse ;
+    border-bottom: solid black 0.1em;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*------------------------------------------------ BOTON VOLVER------------------------------------------------*/
 .volver{
     display: flex;
@@ -70,3 +108,5 @@ body{
 
 
 /*------------------------------------------------FIN BOTON VOLVER------------------------------------------------*/
+
+
