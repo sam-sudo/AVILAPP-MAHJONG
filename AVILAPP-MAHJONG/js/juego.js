@@ -1,5 +1,6 @@
  function inicio(){
     document.getElementById('puntos').value=0;
+    document.getElementById('vidas').value=10;
 };
 window.onload = inicio;
 
@@ -29,24 +30,32 @@ function visible(){
             document.getElementById('tMedio').style.display= 'none';
             document.getElementById('tDificil').style.display= 'none';
             document.getElementById('tNideCoña').style.display= 'none';
+            document.getElementById('vida').style.display= 'none';
+
             break;
         case "medio":
               document.getElementById('tFacil').style.display= 'none';
               document.getElementById('tMedio').style.display= 'flex';
               document.getElementById('tDificil').style.display= 'none';
               document.getElementById('tNideCoña').style.display= 'none';
+            document.getElementById('vida').style.display= 'none';
+
          break;
         case "dificil":
               document.getElementById('tFacil').style.display= 'none';
               document.getElementById('tMedio').style.display= 'none';
               document.getElementById('tDificil').style.display= 'flex';
               document.getElementById('tNideCoña').style.display= 'none';
+            document.getElementById('vida').style.display= 'none';
+
          break;
          case "avanzado":
               document.getElementById('tFacil').style.display= 'none';
               document.getElementById('tMedio').style.display= 'none';
               document.getElementById('tDificil').style.display= 'none';
               document.getElementById('tNideCoña').style.display= 'flex';
+            document.getElementById('vida').style.display= 'flex';
+
          break;
     }
 }
@@ -320,6 +329,20 @@ function controlDificil(){
 
 //----------------------------------------Ni de coña-------------------------------------------
 
+var vidas = 10
+
+function VidasJuego(x){
+    vidas += parseInt(x)
+    if(vidas <= 0){
+        vidas=0
+        document.getElementById('vidas').value = vidas
+    }else{
+    vidas+=parseInt(x)
+    document.getElementById('vidas').value = vidas;
+    }
+}
+
+
 
 
 var numClickNDC = 0;
@@ -380,7 +403,6 @@ cartasNDC[46] = '../img/cartas/carta24.png';
 cartasNDC[47] = '../img/cartas/carta24.png';
 cartasNDC[48] = '../img/cartas/carta25.png';
 cartasNDC[49] = '../img/cartas/carta25.png';
-
 cartasNDC[50] = '../img/cartas/carta13.png';
 cartasNDC[51] = '../img/cartas/carta13.png';
 cartasNDC[52] = '../img/cartas/carta14.png';
@@ -445,6 +467,7 @@ function controlNDC(){
   numClickNDC = 0;
 
   if(cartasNDC[secondNDC] == cartasNDC[firstNDC] && firstNDC != secondNDC){
+      VidasJuego(1);
       matchNDC++;
       puntos(15)
       document.images[firstNDC].style.visibility = 'hidden'
@@ -455,7 +478,13 @@ function controlNDC(){
       }
   }else{
     puntos(-4)
+    VidasJuego(-1);
       document.images[firstNDC].src = "../img/cartas/abajo.png"
       document.images[secondNDC].src = "../img/cartas/abajo.png"
+      if(vidas == 0){
+          alert('Perdiste')
+          location.reload();
+      }
   }
 }
+
