@@ -15,6 +15,9 @@
 </head>
 <body onload="visible(), inicio()">
     <header>
+
+
+        <!-- ----------------------------------------------------puntucacion------------------------------------------------------>
         <div class="puntuacion">
             <div class="panel">
                 <form action="puntuaje">
@@ -23,7 +26,18 @@
                 <h1>PUNTOS</h1>
             </div>
         </div>
+        <!-- ----------------------------------------------------puntucacion------------------------------------------------------>
         
+        <div class="vidas" id="vida">
+            <div class="panelvidas">
+                <form action="vidas">
+                    <input type="text" name="puntos" id="vidas" readonly disabled>
+                </form>
+                <h1>VIDAS</h1>
+            </div>
+        </div>
+
+
         <div  class="nombre">
             <h1 >AVILAPP-MAHJONG</h1>
         </div>
@@ -144,14 +158,7 @@
                         <td><img src="../img/cartas/abajo.png" alt="imagen" onclick="cambiarImagenNDC(73)"></td>
                     </tr>
                 </table>
-                <div class="vidas">
-                    <div class="panelvidas">
-                        <form action="vidas">
-                            <input type="text" name="puntos" id="vidas" readonly disabled>
-                        </form>
-                        <h1>VIDAS</h1>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </section>

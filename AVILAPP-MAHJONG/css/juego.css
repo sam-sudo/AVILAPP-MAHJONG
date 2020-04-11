@@ -168,3 +168,39 @@ ALTO 217
 /*------------------------------------------------FIN BOTON VOLVER------------------------------------------------*/
 
 
+/*------------------------------------------------ VIDA CSS------------------------------------------------*/
+
+.vidas{
+    width:  40%;
+    
+}
+
+.panelvidas{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+}
+
+
+.panelvidas h1{
+    font-weight: bold;
+    color: black;
+    font-size: 3em;
+    -webkit-text-stroke: 1px white;
+}
+.panelvidas input{
+    display: flex;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 3em;
+    color: black;
+    
+}
+.panelvidas > *{
+    display: flex;
+    margin: auto;
+    height: 50%;
+    
+}
+

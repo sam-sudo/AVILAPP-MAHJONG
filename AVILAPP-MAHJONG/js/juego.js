@@ -29,24 +29,32 @@ function visible(){
             document.getElementById('tMedio').style.display= 'none';
             document.getElementById('tDificil').style.display= 'none';
             document.getElementById('tNideCoña').style.display= 'none';
+            document.getElementById('vida').style.display= 'none';
+
             break;
         case "medio":
               document.getElementById('tFacil').style.display= 'none';
               document.getElementById('tMedio').style.display= 'flex';
               document.getElementById('tDificil').style.display= 'none';
               document.getElementById('tNideCoña').style.display= 'none';
+            document.getElementById('vida').style.display= 'none';
+
          break;
         case "dificil":
               document.getElementById('tFacil').style.display= 'none';
               document.getElementById('tMedio').style.display= 'none';
               document.getElementById('tDificil').style.display= 'flex';
               document.getElementById('tNideCoña').style.display= 'none';
+            document.getElementById('vida').style.display= 'none';
+
          break;
          case "avanzado":
               document.getElementById('tFacil').style.display= 'none';
               document.getElementById('tMedio').style.display= 'none';
               document.getElementById('tDificil').style.display= 'none';
               document.getElementById('tNideCoña').style.display= 'flex';
+            document.getElementById('vida').style.display= 'flex';
+
          break;
     }
 }
