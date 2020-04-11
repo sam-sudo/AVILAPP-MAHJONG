@@ -317,3 +317,145 @@ function controlDificil(){
       document.images[secondDificil].src = "../img/cartas/abajo.png"
   }
 }
+
+//----------------------------------------Ni de coña-------------------------------------------
+
+
+
+var numClickNDC = 0;
+var firstNDC;
+var secondNDC;
+var matchNDC = 0;
+
+
+
+var cartasNDC = [];
+cartasNDC[0] = '../img/cartas/carta1.png';
+cartasNDC[1] = '../img/cartas/carta1.png';
+cartasNDC[2] = '../img/cartas/carta2.png';
+cartasNDC[3] = '../img/cartas/carta2.png';
+cartasNDC[4] = '../img/cartas/carta3.png';
+cartasNDC[5] = '../img/cartas/carta3.png';
+cartasNDC[6] = '../img/cartas/carta4.png';
+cartasNDC[7] = '../img/cartas/carta4.png';
+cartasNDC[8] = '../img/cartas/carta5.png';
+cartasNDC[9] = '../img/cartas/carta5.png';
+cartasNDC[10] = '../img/cartas/carta6.png';
+cartasNDC[11] = '../img/cartas/carta6.png';
+cartasNDC[12] = '../img/cartas/carta7.png';
+cartasNDC[13] = '../img/cartas/carta7.png';
+cartasNDC[14] = '../img/cartas/carta8.png';
+cartasNDC[15] = '../img/cartas/carta8.png';
+cartasNDC[16] = '../img/cartas/carta9.png';
+cartasNDC[17] = '../img/cartas/carta9.png';
+cartasNDC[18] = '../img/cartas/carta10.png';
+cartasNDC[19] = '../img/cartas/carta10.png';
+cartasNDC[20] = '../img/cartas/carta11.png';
+cartasNDC[21] = '../img/cartas/carta11.png';
+cartasNDC[22] = '../img/cartas/carta12.png';
+cartasNDC[23] = '../img/cartas/carta12.png';
+cartasNDC[24] = '../img/cartas/carta13.png';
+cartasNDC[25] = '../img/cartas/carta13.png';
+cartasNDC[26] = '../img/cartas/carta14.png';
+cartasNDC[27] = '../img/cartas/carta14.png';
+cartasNDC[28] = '../img/cartas/carta15.png';
+cartasNDC[29] = '../img/cartas/carta15.png';
+cartasNDC[30] = '../img/cartas/carta16.png';
+cartasNDC[31] = '../img/cartas/carta16.png';
+cartasNDC[32] = '../img/cartas/carta17.png';
+cartasNDC[33] = '../img/cartas/carta17.png';
+cartasNDC[34] = '../img/cartas/carta18.png';
+cartasNDC[35] = '../img/cartas/carta18.png';
+cartasNDC[36] = '../img/cartas/carta19.png';
+cartasNDC[37] = '../img/cartas/carta19.png';
+cartasNDC[38] = '../img/cartas/carta20.png';
+cartasNDC[39] = '../img/cartas/carta20.png';
+cartasNDC[40] = '../img/cartas/carta21.png';
+cartasNDC[41] = '../img/cartas/carta21.png';
+cartasNDC[42] = '../img/cartas/carta22.png';
+cartasNDC[43] = '../img/cartas/carta22.png';
+cartasNDC[44] = '../img/cartas/carta23.png';
+cartasNDC[45] = '../img/cartas/carta23.png';
+cartasNDC[46] = '../img/cartas/carta24.png';
+cartasNDC[47] = '../img/cartas/carta24.png';
+cartasNDC[48] = '../img/cartas/carta25.png';
+cartasNDC[49] = '../img/cartas/carta25.png';
+
+cartasNDC[50] = '../img/cartas/carta13.png';
+cartasNDC[51] = '../img/cartas/carta13.png';
+cartasNDC[52] = '../img/cartas/carta14.png';
+cartasNDC[53] = '../img/cartas/carta14.png';
+cartasNDC[54] = '../img/cartas/carta15.png';
+cartasNDC[55] = '../img/cartas/carta15.png';
+cartasNDC[56] = '../img/cartas/carta16.png';
+cartasNDC[57] = '../img/cartas/carta16.png';
+cartasNDC[58] = '../img/cartas/carta17.png';
+cartasNDC[59] = '../img/cartas/carta17.png';
+cartasNDC[60] = '../img/cartas/carta18.png';
+cartasNDC[61] = '../img/cartas/carta18.png';
+cartasNDC[62] = '../img/cartas/carta19.png';
+cartasNDC[63] = '../img/cartas/carta19.png';
+cartasNDC[64] = '../img/cartas/carta20.png';
+cartasNDC[65] = '../img/cartas/carta20.png';
+cartasNDC[66] = '../img/cartas/carta21.png';
+cartasNDC[67] = '../img/cartas/carta21.png';
+cartasNDC[68] = '../img/cartas/carta22.png';
+cartasNDC[69] = '../img/cartas/carta22.png';
+cartasNDC[70] = '../img/cartas/carta23.png';
+cartasNDC[71] = '../img/cartas/carta23.png';
+cartasNDC[72] = '../img/cartas/carta24.png';
+cartasNDC[73] = '../img/cartas/carta24.png';
+cartasNDC[74] = '../img/cartas/carta25.png';
+cartasNDC[75] = '../img/cartas/carta25.png';
+
+
+function shuffleNDC(array){
+    var currentIndex = 73, temporaryValue, randomIndex;
+    while(51 !=currentIndex){
+        randomIndex = Math.floor(Math.random()*currentIndex);
+        if(randomIndex >49 ){
+            currentIndex -=1;
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+    }
+    return array;
+}
+
+var NDC;
+NDC = shuffleNDC(cartasNDC);
+function cambiarImagenNDC(card){
+    
+    if(numClickNDC==0){
+        firstNDC = card;
+        document.images[card].src = cartasNDC[card];
+        numClickNDC = 1;
+    }else if(numClickNDC == 1){
+        numClickNDC = 2;
+        secondNDC = card;
+        document.images[card].src = cartasNDC[card];
+        timer = setInterval(controlNDC, 500);
+    }
+}
+
+function controlNDC(){
+  clearInterval(timer);
+
+  numClickNDC = 0;
+
+  if(cartasNDC[secondNDC] == cartasNDC[firstNDC] && firstNDC != secondNDC){
+      matchMedio++;
+      puntos(15)
+      document.images[firstNDC].style.visibility = 'hidden'
+      document.images[secondNDC].style.visibility = 'hidden'
+      if(matchNDC == 12){
+        alert('ole oleeee')
+        location.href = '../html/puntuacion.html?nombre='+congratulation()
+      }
+  }else{
+    puntos(-4)
+      document.images[firstNDC].src = "../img/cartas/abajo.png"
+      document.images[secondNDC].src = "../img/cartas/abajo.png"
+  }
+}
