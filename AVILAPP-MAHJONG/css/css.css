@@ -6,7 +6,11 @@
     font-family: 'Balsamiq Sans',sans-serif;
 }
 body{
-    background-image: url("../img/fondo.jpg");
+    background: url("../img/fondo.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .container{
     display: flex;
@@ -40,7 +44,11 @@ body{
     width: 50%;
     height: 70px;
     margin-top: 50px;
-    background-image: url("../img/fondoBoton.jpg");
+    background: url("../img/fondoBoton.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     border: none;
     border-radius: 10px;
     -webkit-box-shadow: 10px 10px 32px 6px rgba(0,0,0,0.75);
@@ -55,9 +63,9 @@ body{
 }
 .btn:hover{
     cursor: pointer;
-    font-size: 3em;
     font-weight: bold;
     width: 80%;
+    font-size: 3em;
 }
 
 /*
@@ -82,7 +90,11 @@ body{
     width: 5%;
     height: 70px;
     margin-top: 50px;
-    background-image: url("../img/fondoBoton.jpg");
+    background: url("../img/fondoBoton.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     border: none;
     border-radius: 10px;
     margin-left: 70%;
@@ -164,6 +176,7 @@ a{
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
 }
+
 /*------------------------------------------------FIN MOVIMIENTO IMG------------------------------------------------*/
 
 @media only screen and (min-width:769px) and (max-width:1024px) {
@@ -174,9 +187,6 @@ a{
         margin: 0 auto;
         font-size: 2em;
         
-    }
-    .btn{
-        font-size: 1em;
     }
     .btn:hover{
         font-size: 1em;
@@ -217,14 +227,15 @@ a{
         text-align: center;
         justify-content :center;
         align-items:center;
-        font-size: 2em;
         transition: font-size 1s, width 1s;
     }
     .btn:hover{
         cursor: pointer;
-        font-size: 3em;
         font-weight: bold;
         width: 80%;
+    }
+    a{
+        font-size: 100%;
     }
 
   }
@@ -236,7 +247,6 @@ a{
     }
     .nombre{
         margin: 0 auto;
-        font-size: 2em;
         
     }
     .btn{
@@ -280,12 +290,10 @@ a{
         text-align: center;
         justify-content :center;
         align-items:center;
-        font-size: 2em;
         transition: font-size 1s, width 1s;
     }
     .btn:hover{
         cursor: pointer;
-        font-size: 3em;
         font-weight: bold;
         width: 80%;
     }

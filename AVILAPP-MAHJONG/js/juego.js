@@ -467,7 +467,7 @@ function controlNDC(){
   numClickNDC = 0;
 
   if(cartasNDC[secondNDC] == cartasNDC[firstNDC] && firstNDC != secondNDC){
-      VidasJuego(1);
+      VidasJuego(2);
       matchNDC++;
       puntos(15)
       document.images[firstNDC].style.visibility = 'hidden'
