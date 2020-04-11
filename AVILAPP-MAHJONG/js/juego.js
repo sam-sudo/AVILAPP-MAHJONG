@@ -445,7 +445,7 @@ function controlNDC(){
   numClickNDC = 0;
 
   if(cartasNDC[secondNDC] == cartasNDC[firstNDC] && firstNDC != secondNDC){
-      matchMedio++;
+      matchNDC++;
       puntos(15)
       document.images[firstNDC].style.visibility = 'hidden'
       document.images[secondNDC].style.visibility = 'hidden'
