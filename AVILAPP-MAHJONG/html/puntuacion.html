@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<head><meta charset="shift_jis">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Adrián Ávila Torres, Samuel Hueso García, Russell Jhoel Delgado Muñoz">
     <link rel="stylesheet" href="../css/puntuacion.css">
     <script src="../js/puntuacion.js"></script>
 
+    <script text="text/javascript">
+
+
+        function ajax_get_json(){
+        
+            var nombre = document.getElementById('info_nombre')
+            var puntos = document.getElementById('info_puntos')
+
+        
+            var xmlhttp;
+        
+            if(window.XMLHttpRequest){
+                xmlhttp= new XMLHttpRequest()
+        
+            }else{
+                xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
+            }
+        
+            xmlhttp.onreadystatechange = function(){
+        
+                if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+                    var datos = JSON.parse(xmlhttp.responseText)
+                    console.log(datos)
+                    
+                        nombre.innerHTML += datos[0]["nombre"] +"<br/>"
+                        puntos.innerHTML += datos[0]["puntos"] +"<br/>"
+                        
+                    
+                }
+        
+            }
+        
+            xmlhttp.open("GET", "../json/datos.json", true)
+            xmlhttp.send()
+        
+        }
+        
+    </script>
 
 </head> 
-<body onload="traerDatos()">
+<body onload="ajax_get_json()">
     <header>
         <div class="nombre">
             <h1>AVILAPP-MAHJONG</h1>
@@ -22,8 +60,8 @@
                 <th>PUNTOS</th>
             </tr>
             <tr>
-                <td><p class="nombreUser"></p></td>
-                <td>0</td>
+                <td id="info_nombre"><p class="nombreUser"></p></td>
+                <td id="info_puntos"></td>
             </tr>
             <tr>
                 <td></td>
@@ -39,6 +77,7 @@
             </tr>
         </table>
     </section>
+    <div></div>
     <footer>
         <div class="volver">
             <a href="../index.html" class=" btn-volver sonido" onmouseover="auudios()">volver</a>
