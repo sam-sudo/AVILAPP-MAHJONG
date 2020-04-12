@@ -23,14 +23,7 @@ header{
     flex-direction: row;
 }
 
-footer{
-    position: absolute;
-     bottom: 0;
-     right: 0;
-     
-     
-     width: 20%;
-}
+
 
 .puntuacion{
     width:  40%;
@@ -148,7 +141,7 @@ ALTO 217
 .btn-volver{
     display: flex;
     background-color: rebeccapurple;
-    width: 100%;
+    width: 20%;
     height: 70px;
     margin-top: 50px;
     background-image: url("../img/fondoBoton.jpg");
@@ -169,7 +162,10 @@ ALTO 217
 
 
 
-
+footer{
+    width: 100%;
+    margin-top: 10px;
+}
 
 /*------------------------------------------------FIN BOTON VOLVER------------------------------------------------*/
 
@@ -245,5 +241,8 @@ img{
     width:  100%;
     font-size: 0.7em;
     
+}
+.volver{
+    font-size: 0.5em;
 }
 }
