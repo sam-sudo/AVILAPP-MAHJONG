@@ -14,12 +14,18 @@ for (i=0; i<arrVariables.length; i++) {
 }
 
 
+
+
+
+//--------------------------------------SOLICITUD JSON-----------------------------------------------------
+
 function ajax_get_json(){
         
   var nombre = document.getElementById('info_nombre')
   var puntos = document.getElementById('info_puntos')
   var nombre2 = document.getElementById('info_nombre2')
   var puntos2 = document.getElementById('info_puntos2')
+
 
 
   var xmlhttp;
@@ -50,3 +56,6 @@ function ajax_get_json(){
   xmlhttp.send()
 
 }
+  //--------------------------------------fIN SOLICITUD JSON-----------------------------------------------------
+
+
