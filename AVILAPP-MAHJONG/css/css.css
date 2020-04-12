@@ -41,7 +41,7 @@ body{
 }
 
 .btn{
-    width: 50%;
+    width: 40%;
     height: 70px;
     margin-top: 50px;
     background: url("../img/fondoBoton.jpg") no-repeat center center fixed;
@@ -58,33 +58,16 @@ body{
     text-align: center;
     justify-content :center;
     align-items:center;
-    font-size: 2em;
+    font-size: 1.7em;
     transition: font-size 1.5s, width 1s;
 }
 .btn:hover{
     cursor: pointer;
     font-weight: bold;
-    width: 80%;
+    width: 60%;
     font-size: 3em;
 }
 
-/*
-#btnSonido{
-    width: 30%;
-    height: 70px;
-    margin-top: 50px;
-    background-image: url("../img/fondoBoton.jpg");
-    border: none;
-    border-radius: 10px;
-    
-    display: flex;
-    text-align: center;
-    justify-content :center;
-    align-items:center;
-    
-}
-
-*/
 
 #btnSonido{
     width: 5%;
@@ -104,16 +87,6 @@ body{
     align-items:center;
     
 }
-
-/*
-.divSilencio{
-    position: absolute;
-     bottom: 0;
-     right: 0;
-     margin-bottom: 2em;
-     width: 20%;
-}
-*/
 .divSilencio{
     display: flex;
     justify-content: right;
@@ -179,66 +152,7 @@ a{
 
 /*------------------------------------------------FIN MOVIMIENTO IMG------------------------------------------------*/
 
-@media only screen and (min-width:769px) and (max-width:1024px) {
-    .ficha{
-        display: none;
-    }
-    .nombre{
-        margin: 0 auto;
-        font-size: 2em;
-        
-    }
-    .btn:hover{
-        font-size: 1em;
-    }
-    .menu{
-        width: 100%;
-        text-align: center;
-        justify-content :center;
-        align-items: center;
-    }
-    #btnSonido{
-        width: 100%;
-        height: 70px;
-        margin-top: 50px;
-        background-image: url("../img/fondoBoton.jpg");
-        border: none;
-        border-radius: 10px;
-        
-        display: flex;
-        text-align: center;
-        justify-content :center;
-        align-items:center;
-        
-    }
-   
 
-    .btn{
-        width: 50%;
-        height: 70px;
-        margin-top: 50px;
-        background-image: url("../img/fondoBoton.jpg");
-        border: none;
-        border-radius: 10px;
-        -webkit-box-shadow: 10px 10px 32px 6px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 32px 6px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 32px 6px rgba(0,0,0,0.75);
-        display: flex;
-        text-align: center;
-        justify-content :center;
-        align-items:center;
-        transition: font-size 1s, width 1s;
-    }
-    .btn:hover{
-        cursor: pointer;
-        font-weight: bold;
-        width: 80%;
-    }
-    a{
-        font-size: 100%;
-    }
-
-  }
 
 
 @media only screen and (max-width: 768px) {
@@ -250,10 +164,10 @@ a{
         font-size: 1em;;
     }
     .btn{
-        font-size: 1em;
+        font-size: 1.3em;
     }
     .btn:hover{
-        font-size: 1em;
+        font-size: 1.4em;
     }
     .menu{
         width: 100%;
@@ -262,13 +176,13 @@ a{
         align-items: center;
     }
     #btnSonido{
-        width: 100%;
+        width: 20%;
         height: 70px;
         margin-top: 50px;
         background-image: url("../img/fondoBoton.jpg");
         border: none;
         border-radius: 10px;
-        
+          margin-left: 40%;
         display: flex;
         text-align: center;
         justify-content :center;

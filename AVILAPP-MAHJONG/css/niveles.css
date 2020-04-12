@@ -52,14 +52,14 @@ body{
     text-align: center;
     justify-content :center;
     align-items:center;
-    font-size: 2em;
+    font-size: 1.8em;
     transition: width 1s;
 }
 .btn:hover{
     cursor: pointer;
     font-weight: bold;
     width: 60%;
-    font-size: 3em;
+    font-size: 2.1em;
 }
 
 .ficha{
@@ -149,7 +149,7 @@ a{
 }
 /*------------------------------------------------FIN MOVIMIENTO IMG------------------------------------------------*/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .ficha{
         display: none;
     }
@@ -159,6 +159,11 @@ a{
     .btn{
         font-size: 1em;
     }
+
+    .btn:hover{
+        font-size: 1.3em;
+    }
+
     .menu{
         width: 100%;
         text-align: center;
@@ -168,4 +173,10 @@ a{
     .btn-volver{
         font-size: 1em;
     }
+
+    .nombre{
+        margin: 0 auto;
+        font-size: 1em;;
+    }
+
   }

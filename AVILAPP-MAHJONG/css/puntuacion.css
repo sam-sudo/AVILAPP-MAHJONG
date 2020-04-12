@@ -24,11 +24,7 @@ body{
 
 }
 
-footer{
-    position: absolute;
-     bottom: 0;
-     width: 99%;
-}
+
 
 
 
@@ -86,8 +82,6 @@ th,td{
     display: flex;
     background-color: rebeccapurple;
 
- 
-
     width: 15%;
     height: 70px;
     margin-top: 50px;
@@ -114,3 +108,16 @@ th,td{
 /*------------------------------------------------FIN BOTON VOLVER------------------------------------------------*/
 
 
+@media only screen and (max-width: 768px) {
+
+    .btn-volver{
+        font-size: 1em;
+    }
+
+
+    .nombre{
+        margin: 0 auto;
+        font-size: 1em;;
+    }
+
+}
