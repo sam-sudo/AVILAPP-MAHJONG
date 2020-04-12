@@ -235,6 +235,15 @@ img{
     width: 100%;
 }
 
+.panelvidas h1{
+    font-size: 2em;
+    
+}
 
 
+.puntuacion{
+    width:  100%;
+    font-size: 0.7em;
+    
+}
 }
