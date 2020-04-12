@@ -58,7 +58,7 @@ body{
     text-align: center;
     justify-content :center;
     align-items:center;
-    font-size: 2em;
+    font-size: 1.7em;
     transition: font-size 1.5s, width 1s;
 }
 .btn:hover{

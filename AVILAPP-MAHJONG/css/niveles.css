@@ -168,4 +168,10 @@ a{
     .btn-volver{
         font-size: 1em;
     }
+
+    .nombre{
+        margin: 0 auto;
+        font-size: 1em;;
+    }
+
   }
