@@ -111,7 +111,9 @@ tr,td{
     display: none;
 }
 
-
+img{
+    width: 100%;
+}
 
 /*------------------------------------------------ IMG------------------------------------------------*/
 /*
@@ -208,3 +210,31 @@ ALTO 217
     
 }
 
+/*------------------------------------------------tablas------------------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+
+section{
+    width: 100%;
+}
+
+
+table,tr,td{
+    
+   width: 100%;
+   display: flex;
+   justify-content :center;
+    align-items:center;
+   
+}
+
+tr,td{
+    padding: 10px;
+}
+img{
+    width: 100%;
+}
+
+
+
+}

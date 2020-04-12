@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scaleble=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
     <meta name="author" content="Adrián Ávila Torres, Samuel Hueso García, Russell Jhoel Delgado Muñoz">
     <link rel="stylesheet" href="../css/juego.css">
     <script src="../js/juego.js"></script>
@@ -15,8 +16,11 @@
 </head>
 <body onload="visible(), inicio()">
     <header>
-
-
+        <div id="cabeza">
+        <div  class="nombre">
+            <h1 >AVILAPP-COUPLE</h1>
+        </div>
+    </div>
         <!-- ----------------------------------------------------puntucacion------------------------------------------------------>
         <div class="puntuacion">
             <div class="panel">
@@ -38,14 +42,12 @@
         </div>
 
 
-        <div  class="nombre">
-            <h1 >AVILAPP-MAHJONG</h1>
-        </div>
+        
     </header>
     <section>
         <div class="juego">
             <div id="tFacil" class="facil">
-                <table>
+                <table class="ejemplotabla">
                     <tr>
                         <td><img src="../img/cartas/abajo.png" alt="imagen0" onclick="cambiarImagenFacil(0)"></td>
                         <td><img src="../img/cartas/abajo.png" alt="imagen1" onclick="cambiarImagenFacil(1)"></td>
