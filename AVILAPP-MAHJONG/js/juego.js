@@ -6,7 +6,7 @@ window.onload = inicio;
 
 
 //---------------------------------------------CAMBIO DE NIVELES--------------------------------------------------------------
-var varMostrar;
+var varMostrar; 
 
 
 cadVariables = location.search.substring(1,location.search.length);
