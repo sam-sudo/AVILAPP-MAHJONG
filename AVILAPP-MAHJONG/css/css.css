@@ -176,13 +176,13 @@ a{
         align-items: center;
     }
     #btnSonido{
-        width: 100%;
+        width: 20%;
         height: 70px;
         margin-top: 50px;
         background-image: url("../img/fondoBoton.jpg");
         border: none;
         border-radius: 10px;
-        
+          margin-left: 40%;
         display: flex;
         text-align: center;
         justify-content :center;
