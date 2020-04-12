@@ -59,7 +59,7 @@ body{
     justify-content :center;
     align-items:center;
     font-size: 2em;
-    transition: font-size 1s, width 1s;
+    transition: font-size 1.5s, width 1s;
 }
 .btn:hover{
     cursor: pointer;
@@ -247,7 +247,7 @@ a{
     }
     .nombre{
         margin: 0 auto;
-        
+        font-size: 1em;;
     }
     .btn{
         font-size: 1em;
