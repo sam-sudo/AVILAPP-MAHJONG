@@ -211,36 +211,36 @@ section{
     }
 
     #primer{
-        margin-top: 40%;
+        
 
         display: none;
         font: 5vw/10vh "Finger Paint";
     }
     #segundo{
-        margin-top: 40%;
+        
         display: none;
         font: 4vw/10vh "Finger Paint";
         
     }
     #tercero{
-        margin-top: 40%;
+        
         display: none;
         font: 4vw/10vh "Finger Paint";
     }
     #cuarto{
-        margin-top: 40%;
+        
         display: none;
         font: 5vw/10vh "Finger Paint";
     
     }
     #quinto{
-        margin-top: 50%;
+       
         display: none;
         font: 5vw/4vh "Finger Paint";
     
     }
     #sexto{
-        margin-top: 40%;
+        
         
         display: none;
         font: 5vw/4vh "Finger Paint";
@@ -254,7 +254,7 @@ section{
     
     }
     #octavo{
-        margin-top: 40%;
+        
         margin: auto;
         display: none;
         font: 5vw/4vh "Finger Paint";
