@@ -5,6 +5,9 @@
 window.onload = inicio;
 
 
+
+
+
 //---------------------------------------------CAMBIO DE NIVELES--------------------------------------------------------------
 var varMostrar; 
 
@@ -175,7 +178,7 @@ function controlFacil(){
         document.images[secondFacil].style.visibility = 'hidden'
         if(matchFacil == 4){
             desaparecer()
-            location.href = '../html/puntuacion.html?nombre='+congratulation()
+            location.href = '../html/puntuacion.html?nombre='+congratulationFacil()
         }
     }else{
         puntos(-4)
@@ -183,9 +186,42 @@ function controlFacil(){
         document.images[secondFacil].src = "../img/cartas/abajo.png"
       }
   }
-  function congratulation(){
-    return prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
+
+  function congratulationFacil(){
+    var accesoPuntosFacil = localStorage.getItem('puntosFacil')
+    
+    var nombrePrompt =  prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
+    
+    
+    if(punto > accesoPuntosFacil){
+        var puntosJSON1 = {'Jugador': nombrePrompt,'Puntos':punto}
+    
+
+        localStorage.setItem('puntosFacil',JSON.stringify(puntosJSON1))
+        console.log("piuntos a = " +accesoPuntosFacil )
+    }
+
+   
+    return nombrePrompt
   }
+
+  function congratulationMedio(){
+
+    var accesoPuntosMedio = localStorage.getItem('puntosMedio')
+    
+    var nombrePrompt =  prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
+    
+    
+    if(punto > accesoPuntosMedio){
+        var puntosJSON1 = {'Jugador': nombrePrompt,'Puntos':punto}
+    
+
+        localStorage.setItem('puntosMedio',JSON.stringify(puntosJSON1))
+        
+    }
+    return nombrePrompt
+  }
+  
 
 function desaparecer(){
     document.getElementById('tFacil').style.display= 'none';
@@ -252,7 +288,7 @@ function controlMedio(){
       document.images[secondMedio].style.visibility = 'hidden'
       if(matchMedio == 9){
           alert('ole oleeee')
-          location.href = '../html/puntuacion.html?nombre='+congratulation()
+          location.href = '../html/puntuacion.html?nombre='+congratulationMedio()
       }
   }else{
       document.images[firstMedio].src = "../img/cartas/abajo.png"
@@ -318,7 +354,7 @@ function controlDificil(){
       document.images[secondDificil].style.visibility = 'hidden'
       if(matchMedio == 12){
         alert('ole oleeee')
-        location.href = '../html/puntuacion.html?nombre='+congratulation()
+        location.href = '../html/puntuacion.html?nombre='+congratulationDificil()
       }
   }else{
     puntos(-4)
@@ -474,7 +510,7 @@ function controlNDC(){
       document.images[secondNDC].style.visibility = 'hidden'
       if(matchNDC == 12){
         alert('ole oleeee')
-        location.href = '../html/puntuacion.html?nombre='+congratulation()
+        location.href = '../html/puntuacion.html?nombre='+congratulationNiDeCoña()
       }
   }else{
     puntos(-4)

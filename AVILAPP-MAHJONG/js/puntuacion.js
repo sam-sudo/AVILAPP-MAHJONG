@@ -16,46 +16,40 @@ for (i=0; i<arrVariables.length; i++) {
 
 
 
+//----------------------------SONIDO BOTON-----------------------------------
 
-//--------------------------------------SOLICITUD JSON-----------------------------------------------------
+var reproducir = new Audio();
+reproducir.src = "music/sonidoBoton.mp3";
+       
+var audio = true;
 
-function ajax_get_json(){
-        
-  var nombre = document.getElementById('info_nombre')
-  var puntos = document.getElementById('info_puntos')
-  var nombre2 = document.getElementById('info_nombre2')
-  var puntos2 = document.getElementById('info_puntos2')
-
-
-
-  var xmlhttp;
-
-  if(window.XMLHttpRequest){
-      xmlhttp= new XMLHttpRequest()
-
-  }else{
-      xmlhttp= new ActiveXObject("Microsoft.XMLHTTP")
-  }
-
-  xmlhttp.onreadystatechange = function(){
-
-      if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
-          var datos = JSON.parse(xmlhttp.responseText)
-          console.log(datos)
-              
-              nombre.innerHTML += datos[0]["nombre"] +"<br/>"
-              puntos.innerHTML += datos[0]["puntos"] +"<br/>"
-              nombre2.innerHTML += datos[1]["nombre"] +"<br/>"
-              puntos2.innerHTML += datos[1]["puntos"] +"<br/>"
-          
-      }
-
-  }
-
-  xmlhttp.open("GET", "../json/datos.json", true)
-  xmlhttp.send()
-
+function auudios() {
+    if(audio == false){
+    reproducir.play();
+    }
 }
-  //--------------------------------------fIN SOLICITUD JSON-----------------------------------------------------
+function auudiosStop() {
+    
+    reproducir.pause()
+    
+}
 
+var image = document.getElementById('imgSonido')
 
+var cambio = 0;
+
+function cambiarImagen(){
+     if (cambio == 0) {
+        document.getElementById('imgSonido').src = "img/ico/musical.png";
+        cambio = 1
+        audio = false
+        auudios()
+      } else {
+        document.getElementById('imgSonido').src = "img/ico/mute.png";
+        cambio = 0
+        audio = true
+        auudiosStop();
+      }
+     
+}
+//----------------------------FIN SONIDO BOTON-----------------------------------

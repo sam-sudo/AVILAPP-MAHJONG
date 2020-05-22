@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jugadores>
+    <jugador>
+        <nombre>Sam</nombre>
+        <puntos>300</puntos>
+    </jugador>
+    <jugador>
+        <nombre>Adrián</nombre>
+        <puntos>200</puntos>
+    </jugador>
+    <jugador>
+        <nombre>Russel</nombre>
+        <puntos>100</puntos>
+    </jugador>
+</jugadores>

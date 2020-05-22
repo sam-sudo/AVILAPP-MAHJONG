@@ -6,14 +6,51 @@
     <meta name="author" content="Adrián Ávila Torres, Samuel Hueso García, Russell Jhoel Delgado Muñoz">
     <link rel="stylesheet" href="../css/puntuacion.css">
     <script src="../js/puntuacion.js"></script>
-    <script src="../librerias/FileSaver.js"></script>
+    
 
-    <script text="text/javascript">
+    <script type="text/javascript">
+
+    var accesoPuntosFacil = localStorage.getItem('puntosFacil')
+    var accesoPuntosMedio = localStorage.getItem('puntosMedio')
+
+
+    var nombreJugadorFacil = JSON.parse(accesoPuntosFacil)['Jugador']
+    var puntosJugadorFacil = parseInt(JSON.parse(accesoPuntosFacil)['Puntos'] )
+
+    var nombreJugadorMedio = JSON.parse(accesoPuntosMedio)['Jugador']
+    var puntosJugadorMedio = parseInt(JSON.parse(accesoPuntosMedio)['Puntos'] )
+/*
+    function consultar(){
+         nombrePrimero = document.getElementById("nombreFacil").textContent
+         nombreSegundo = document.getElementById("nombreMedio").textContent
+         nombreTercero = document.getElementById("nombreDificil").textContent
+         nombreCuarto = document.getElementById("nombreNiDeCoña").textContent
+
+         puntosActualesPrimero = parseInt(document.getElementById("puntosFacil").textContent)
+         puntosActualesSegundo = parseInt(document.getElementById("puntosMedio").textContent)
+         puntosActualesTercero = parseInt(document.getElementById("puntosDificil").textContent)
+         puntosActualesCuarto = parseInt(document.getElementById("puntosNiDeCoña").textContent)
+    }
+    */
+    function cargar(){
         
-    </script>
+            
+            document.getElementById("nombreFacil").innerHTML= nombreJugadorFacil
+            document.getElementById("puntosFacil").innerHTML= puntosJugadorFacil
+        
+            document.getElementById("nombreMedio").innerHTML= nombreJugadorMedio
+            document.getElementById("puntosMedio").innerHTML= puntosJugadorMedio
+        
+        
+        
+    
+    
+    }
+        
+    </script> 
 
 </head> 
-<body onload="crearFichero()">
+<body onload="cargar()">
     <header>
         <div class="nombre">
             <h1>AVILAPP-COUPLE</h1>
@@ -26,20 +63,20 @@
                 <th>PUNTOS</th>
             </tr>
             <tr>
-                <td id="info_nombre"><p class="nombreUser"></p></td>
-                <td id="info_puntos"></td>
+                <td ><p id="nombreFacil">----</p></td>
+                <td ><p id="puntosFacil">0000</p></td>
             </tr>
             <tr>
-                <td id="info_nombre2"></td>
-                <td id="info_puntos2"></td>
+                <td ><p id="nombreMedio">----</p></td>
+                <td ><p id="puntosMedio">0000</p></td>
             </tr>
             <tr>
-                <td></td>
-                <td>0</td>
+                <td ><p id="nombreDificil">----</p></td>
+                <td ><p id="puntosDificil">0000</p></td>
             </tr>
             <tr>
-                <td></td>
-                <td>0</td>
+                <td ><p id="nombreNiDeCoña">----</p></td>
+                <td ><p id="puntosNiDeCoña">0000</p></td>
             </tr>
         </table>
     </section>
