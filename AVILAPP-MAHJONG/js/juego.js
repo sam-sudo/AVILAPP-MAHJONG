@@ -188,17 +188,20 @@ function controlFacil(){
   }
 
   function congratulationFacil(){
+    
+
     var accesoPuntosFacil = localStorage.getItem('puntosFacil')
+    var puntosJugadorFacil = parseInt(JSON.parse(accesoPuntosFacil)['Puntos'] )
     
     var nombrePrompt =  prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
     
-    
-    if(punto > accesoPuntosFacil){
+    alert(puntosJugadorFacil+ "---"+ punto)
+    if(punto > puntosJugadorFacil){
+        
+        alert("eerer")
         var puntosJSON1 = {'Jugador': nombrePrompt,'Puntos':punto}
-    
-
         localStorage.setItem('puntosFacil',JSON.stringify(puntosJSON1))
-        console.log("piuntos a = " +accesoPuntosFacil )
+        
     }
 
    
@@ -206,9 +209,9 @@ function controlFacil(){
   }
 
   function congratulationMedio(){
-
-    var accesoPuntosMedio = localStorage.getItem('puntosMedio')
     
+    var accesoPuntosMedio = localStorage.getItem('puntosMedio')
+
     var nombrePrompt =  prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
     
     

@@ -9,7 +9,12 @@
     
 
     <script type="text/javascript">
+var puntosJSON1 = {'Jugador': "RuSan",'Puntos':"22"}
+    localStorage.setItem('puntosFacil',JSON.stringify(puntosJSON1)) 
 
+    
+    
+    
     var accesoPuntosFacil = localStorage.getItem('puntosFacil')
     var accesoPuntosMedio = localStorage.getItem('puntosMedio')
 
@@ -19,6 +24,10 @@
 
     var nombreJugadorMedio = JSON.parse(accesoPuntosMedio)['Jugador']
     var puntosJugadorMedio = parseInt(JSON.parse(accesoPuntosMedio)['Puntos'] )
+
+
+    
+
 /*
     function consultar(){
          nombrePrimero = document.getElementById("nombreFacil").textContent
@@ -34,14 +43,13 @@
     */
     function cargar(){
         
-            
+        
             document.getElementById("nombreFacil").innerHTML= nombreJugadorFacil
             document.getElementById("puntosFacil").innerHTML= puntosJugadorFacil
         
             document.getElementById("nombreMedio").innerHTML= nombreJugadorMedio
             document.getElementById("puntosMedio").innerHTML= puntosJugadorMedio
-        
-        
+            
         
     
     
