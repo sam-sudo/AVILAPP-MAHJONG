@@ -106,8 +106,8 @@ str = document.getElementById("nombreDificil").innerHTML
       var puntosJugadorDificil = parseInt(JSON.parse(accesoPuntosDificil)['Puntos'] )
 
 
-          document.getElementById("nombreMedio").innerHTML= nombreJugadorDificil
-          document.getElementById("puntosMedio").innerHTML= puntosJugadorDificil
+          document.getElementById("nombreDificil").innerHTML= nombreJugadorDificil
+          document.getElementById("puntosDificil").innerHTML= puntosJugadorDificil
           
          
 }
