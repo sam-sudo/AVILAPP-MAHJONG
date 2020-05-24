@@ -211,30 +211,7 @@ function controlFacil(){
     return nombrePrompt
   }
 
-  function congratulationMedio(){
-    
-    
-    puntosJugadorMedio = 0;
-
-    if(localStorage.getItem('puntosMedio') !== null){
-        var accesoPuntosMedio = localStorage.getItem('puntosMedio')
-        var puntosJugadorMedio = parseInt(JSON.parse(accesoPuntosMedio)['Puntos'] )
-
-    }
-    
-    
-    var nombrePrompt =  prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
-    
-    if(punto > puntosJugadorMedio){
-        
-        var puntosJSON1 = {'Jugador': nombrePrompt,'Puntos':punto}
-        localStorage.setItem('puntosMedio',JSON.stringify(puntosJSON1))
-        
-    }
-
-   
-    return nombrePrompt
-  }
+  
   
 
 function desaparecer(){
@@ -312,7 +289,30 @@ function controlMedio(){
 } 
 
 
+function congratulationMedio(){
+    
+    
+    puntosJugadorMedio = 0;
 
+    if(localStorage.getItem('puntosMedio') !== null){
+        var accesoPuntosMedio = localStorage.getItem('puntosMedio')
+        var puntosJugadorMedio = parseInt(JSON.parse(accesoPuntosMedio)['Puntos'] )
+
+    }
+    
+    
+    var nombrePrompt =  prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
+    
+    if(punto > puntosJugadorMedio){
+        
+        var puntosJSON1 = {'Jugador': nombrePrompt,'Puntos':punto}
+        localStorage.setItem('puntosMedio',JSON.stringify(puntosJSON1))
+        
+    }
+
+   
+    return nombrePrompt
+  }
 
 
 
@@ -376,6 +376,34 @@ function controlDificil(){
       document.images[secondDificil].src = "../img/cartas/abajo.png"
   }
 }
+
+function congratulationDificil(){
+    
+    
+    puntosJugadorMedio = 0;
+
+    if(localStorage.getItem('puntosDificil') !== null){
+        var accesoPuntosDificil = localStorage.getItem('puntosDificil')
+        var puntosJugadorDificil = parseInt(JSON.parse(accesoPuntosDificil)['Puntos'] )
+
+    }
+    
+    
+    var nombrePrompt =  prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
+    
+    if(punto > puntosJugadorDificil){
+        
+        var puntosJSON1 = {'Jugador': nombrePrompt,'Puntos':punto}
+        localStorage.setItem('puntosDificil',JSON.stringify(puntosJSON1))
+        
+    }
+
+   
+    return nombrePrompt
+  }
+
+
+
 
 //----------------------------------------Ni de coña-------------------------------------------
 
@@ -537,4 +565,29 @@ function controlNDC(){
       }
   }
 }
+
+function congratulationNiDeCoña(){
+    
+    
+    puntosJugadorMedio = 0;
+
+    if(localStorage.getItem('puntosNiDeCoña') !== null){
+        var accesoPuntosNiDeCoña = localStorage.getItem('puntosNiDeCoña')
+        var puntosJugadorNiDeCoña = parseInt(JSON.parse(accesoPuntosNiDeCoña)['Puntos'] )
+
+    }
+    
+    
+    var nombrePrompt =  prompt("ENORABUENA!!! ¿CUAL ES TU NOMBRE CAMPEÓN?","nombre")
+    
+    if(punto > puntosJugadorNiDeCoña){
+        
+        var puntosJSON1 = {'Jugador': nombrePrompt,'Puntos':punto}
+        localStorage.setItem('puntosNiDeCoña',JSON.stringify(puntosJSON1))
+        
+    }
+
+   
+    return nombrePrompt
+  }
 

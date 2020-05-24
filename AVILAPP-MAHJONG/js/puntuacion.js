@@ -114,31 +114,31 @@ str = document.getElementById("nombreDificil").innerHTML
 
 //----------------------------PUNTUACIONES niDeCoña-----------------------------------
 
-str = document.getElementById("nombreMedio").innerHTML
+str = document.getElementById("nombreNiDeCoña").innerHTML
 
-  if(localStorage.getItem('puntosMedio') === null){
+  if(localStorage.getItem('puntosNiDeCoña') === null){
 
       var puntosJSON1 = {'Jugador': "----",'Puntos':"0"}
-      localStorage.setItem('puntosMedio',JSON.stringify(puntosJSON1))
+      localStorage.setItem('puntosNiDeCoña',JSON.stringify(puntosJSON1))
 
-      var accesoPuntosMedio = localStorage.getItem('puntosMedio')
+      var accesoPuntosNiDeCoña = localStorage.getItem('puntosNiDeCoña')
 
-      var nombreJugadorMedio = JSON.parse(accesoPuntosMedio)['Jugador']
-      var puntosJugadorMedio = parseInt(JSON.parse(accesoPuntosMedio)['Puntos'] )
+      var nombreJugadorNiDeCoña = JSON.parse(accesoPuntosNiDeCoña)['Jugador']
+      var puntosJugadorNiDeCoña = parseInt(JSON.parse(accesoPuntosNiDeCoña)['Puntos'] )
 
-      document.getElementById("nombreMedio").innerHTML= nombreJugadorMedio
-      document.getElementById("puntosMedio").innerHTML= puntosJugadorMedio
+      document.getElementById("nombreNiDeCoña").innerHTML= nombreJugadorNiDeCoña
+      document.getElementById("puntosNiDeCoña").innerHTML= puntosJugadorNiDeCoña
 
   }else{
 
-      var accesoPuntosMedio = localStorage.getItem('puntosMedio')
+      var accesoPuntosNiDeCoña = localStorage.getItem('puntosNiDeCoña')
 
-      var nombreJugadorMedio = JSON.parse(accesoPuntosMedio)['Jugador']
-      var puntosJugadorMedio = parseInt(JSON.parse(accesoPuntosMedio)['Puntos'] )
+      var nombreJugadorNiDeCoña = JSON.parse(accesoPuntosNiDeCoña)['Jugador']
+      var puntosJugadorNiDeCoña = parseInt(JSON.parse(accesoPuntosNiDeCoña)['Puntos'] )
 
 
-          document.getElementById("nombreMedio").innerHTML= nombreJugadorMedio
-          document.getElementById("puntosMedio").innerHTML= puntosJugadorMedio
+          document.getElementById("nombreNiDeCoña").innerHTML= nombreJugadorNiDeCoña
+          document.getElementById("puntosNiDeCoña").innerHTML= puntosJugadorNiDeCoña
           
          
 }
