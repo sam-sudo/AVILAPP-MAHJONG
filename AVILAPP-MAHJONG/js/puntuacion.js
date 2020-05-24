@@ -83,31 +83,31 @@ function cargar(){
 
 //----------------------------PUNTUACIONES dificil-----------------------------------
 
-str = document.getElementById("nombreMedio").innerHTML
+str = document.getElementById("nombreDificil").innerHTML
 
-  if(localStorage.getItem('puntosMedio') === null){
+  if(localStorage.getItem('puntosDificil') === null){
 
       var puntosJSON1 = {'Jugador': "----",'Puntos':"0"}
-      localStorage.setItem('puntosMedio',JSON.stringify(puntosJSON1))
+      localStorage.setItem('puntosDificil',JSON.stringify(puntosJSON1))
 
-      var accesoPuntosMedio = localStorage.getItem('puntosMedio')
+      var accesoPuntosDificil = localStorage.getItem('puntosDificil')
 
-      var nombreJugadorMedio = JSON.parse(accesoPuntosMedio)['Jugador']
-      var puntosJugadorMedio = parseInt(JSON.parse(accesoPuntosMedio)['Puntos'] )
+      var nombreJugadorDificil = JSON.parse(accesoPuntosDificil)['Jugador']
+      var puntosJugadorDificil = parseInt(JSON.parse(accesoPuntosDificil)['Puntos'] )
 
-      document.getElementById("nombreMedio").innerHTML= nombreJugadorMedio
-      document.getElementById("puntosMedio").innerHTML= puntosJugadorMedio
+      document.getElementById("nombreDificil").innerHTML= nombreJugadorDificil
+      document.getElementById("puntosDificil").innerHTML= puntosJugadorDificil
 
   }else{
 
-      var accesoPuntosMedio = localStorage.getItem('puntosMedio')
+      var accesoPuntosDificil = localStorage.getItem('puntosDificil')
 
-      var nombreJugadorMedio = JSON.parse(accesoPuntosMedio)['Jugador']
-      var puntosJugadorMedio = parseInt(JSON.parse(accesoPuntosMedio)['Puntos'] )
+      var nombreJugadorDificil = JSON.parse(accesoPuntosDificil)['Jugador']
+      var puntosJugadorDificil = parseInt(JSON.parse(accesoPuntosDificil)['Puntos'] )
 
 
-          document.getElementById("nombreMedio").innerHTML= nombreJugadorMedio
-          document.getElementById("puntosMedio").innerHTML= puntosJugadorMedio
+          document.getElementById("nombreMedio").innerHTML= nombreJugadorDificil
+          document.getElementById("puntosMedio").innerHTML= puntosJugadorDificil
           
          
 }
